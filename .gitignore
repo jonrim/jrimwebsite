@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+dist
+secrets.js
+public/bundle.js
+public/bundle.js.map
+.DS_Store
