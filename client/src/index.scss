@@ -1,7 +1,12 @@
 body {
-  font-family: 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   background-color: ghostwhite;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: inherit !important;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900);
