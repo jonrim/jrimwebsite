@@ -3,7 +3,6 @@ const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const secrets = require('../secrets');
 const env = process.env.NODE_ENV;
 
 const app = express();
