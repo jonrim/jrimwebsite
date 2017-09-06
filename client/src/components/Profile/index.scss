@@ -2,20 +2,27 @@
   width: 60%;
   margin: 0 20%;
   margin-bottom: 50px;
-  overflow: hidden;
+  font-family: 'Raleway', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+  #profile-header {
+    overflow: hidden;
+  }
 
   h1 {
     font-weight: 900;
     text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
-    font-family: 'Raleway', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   }
 
-  img {
+  #profile-img {
     width: 30%;
     border-radius: 20px;
     float: left;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   #buttons {
@@ -40,8 +47,55 @@
     border-radius: 24px;
   }
 
+  .grid {
+
+    @media (max-width: 600px) {
+      margin: 0 -25% !important;
+    }
+
+    @media (max-width: 727px) {
+      margin: 0 -10% !important;
+    }
+
+    @media (min-width: 932px) and (max-width: 1199px) {
+      margin: 0 10% !important;
+    }
+
+    @media (min-width: 1200px) {
+      margin: 0 20% !important;
+    }
+
+    .column {
+      text-align: center;
+      height: 150px;
+
+      img {
+        max-height: 100%;
+      }
+    }
+
+    .ten.column {
+      img {
+        max-height: 50%;
+      }
+    }
+  }
+
+  .education-mobile {
+    .column {
+      height: 33%;
+      width: 33%;
+      padding: 5px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
   @media (max-width: 916px) {
-    img {
+    #profile-img {
       border-radius: 200px;
       width: 40%;
     }
@@ -67,7 +121,7 @@
   }
 
   @media (max-width: 727px) {
-    img {
+    #profile-img {
       width: 60%;
       margin: 0 20%;
       float: none;
