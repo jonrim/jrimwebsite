@@ -20,9 +20,11 @@ body, .app, #landing {
     display: none;
   }
 
-  .column {
+  .column.grid-col, #col-1, #col-2,
+  #col-3, #col-4, #col-5 {
     height: 300px;
     overflow: hidden;
+    padding: 0 !important;
 
     h4 {
       font-weight: 900;
@@ -33,167 +35,15 @@ body, .app, #landing {
       text-align: center;
     }
 
-    .description {
-      visibility: hidden;
-      transition: visibility 0.4s;
-      opacity: 0;
-      top: -200px;
-      position: relative;
-      left: 25px;
-    }
-
-    .info {
-      position: relative;
-      right: 0;
-      top: calc(50% - 26px);
-
-      span {
-        display: inline-block;
-      }
-    }
-
-    @media (min-width: 481px) {
-      .description {
-        float: right;
-        top: -21px;
-        right: -16px;
-        position: relative;
-        width: 50%;
-      }
-
-      .info {
-        transition: right 0.5s ease-in-out;
-      }
-    }
-
-    @media (max-width: 427px) {
-      img {
-        width: 100px;
-        margin: 75px 20px;
-      }
-
-      .info {
-        h4, p {
-          font-size: 12px !important;
-        }
-      }
-
-      .description {
-        top: -154px;
-        left: 10px;
-        font-size: 12px !important;
-      }
-    }
-
     &:hover {
       cursor: pointer;
-    }
-
-    .work-wrapper {
-      width: 80%;
-      margin: 0 10%;
-      height: 100%;
-    }
-  }
-}
-
-@media (min-width: 990px) and (max-width: 1114px), (max-width: 615px) {
-  .grid {
-    .column {
-      .work-wrapper {
-        width: 90% !important;
-        margin: 0 5% !important;
-      }
-    }
-  }
-}
-
-@media (max-width: 916px) {
-  .grid {
-    .column {
-      .work-wrapper {
-        width: 70%;
-        margin: 0 15%;
-      }
-    }
-  }
-}
-
-@media (min-width: 481px) and (max-width: 543px) {
-  .grid {
-    .column {
-      .work-wrapper {
-        width: 90%;
-        margin: 0 5%;
-      }
-    }
-
-    .column.clicked {
-      img {
-        left: -50%;
-        animation: fadeout 0.5s forwards ease-in-out;
-      }
-
-      .info {
-        right: 50%;
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    .column.clicked {
-      .info {
-        animation: topleft 0.5s forwards ease-in-out !important;
-      }
-    }
-
-    .column.unclicked {
-      .info {
-        animation: topleftreverse 0.5s forwards ease-in-out !important;
-      }
-    }
-  }
-}
-
-@media (max-width: 367px) {
-  .grid {
-    .column {
-      .work-wrapper {
-        width: 96%;
-        margin: 0 2%;
-      }
-    }
-  }
-}
-
-#cloud-partners.clicked {
-  .description {
-    display: inline-block;
-    visibility: visible;
-    max-width: 80%;
-    animation: fadein 0.25s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  } 
-  
-  img {
-    left: -50%;
-    animation: fadeout 0.5s forwards ease-in-out;
-  }
-
-  @media (min-width: 481px) {
-    .info {
-      right: 50%;
     }
   }
 }
 
 .button {
-  background-color: #4CAF50 !important;
   border: none;
+  border-radius: 24px !important;
   color: white !important;
   padding: 16px 32px;
   text-align: center;
@@ -293,14 +143,4 @@ body, .app, #landing {
 @include keyframes(fadeout) {
   from { opacity: 1; }
   to   { opacity: 0; }
-}
-
-@include keyframes(topleft) {
-  from { top: calc(50% - 26px); right: 0 }
-  to { top: calc(50% - 130px); right: 50% }
-}
-
-@include keyframes(topleftreverse) {
-  from { top: calc(50% - 130px); right: 50% }
-  to { top: calc(50% - 26px); right: 0 }
 }
