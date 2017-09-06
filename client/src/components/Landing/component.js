@@ -17,16 +17,27 @@ export default class Landing extends Component {
   }
 
   componentDidMount() {
-    Array.from(document.getElementsByClassName('grid-col')).forEach(col => {
-      col = col.children[0];
+    Array.from(document.getElementsByClassName('grid-col')).forEach((col, index) => {
+      // col's direct child is col-wrapper that is used for setting the background
+      // col-wrapper's child is 'work' that will have classes added and removed from it
+      // this lets the background's opacity change on click only for cols 3-6
+      col = col.children[0].children[0];
       col.addEventListener('click', e => {
         if (col.classList.contains('clicked')) {
           col.classList.remove('clicked');
           col.classList.add('unclicked');
+          if (index >= 2) {
+            col.classList.remove('makeDim');
+            col.classList.add('makeBright');
+          }
         }
         else {
           col.classList.add('clicked');
           col.classList.remove('unclicked');
+          if (index >= 2) {
+            col.classList.add('makeDim');
+            col.classList.remove('makeBright');
+          }
         }
       });
     });
@@ -34,11 +45,10 @@ export default class Landing extends Component {
     window.addEventListener('resize', () => {
       if (window.innerWidth < 520) {
         Array.from(document.getElementsByClassName('grid-col')).forEach(col => {
-          col.classList.remove('unclicked');
+          col.children[0].children[0].classList.remove('unclicked');
         });
       }
     });
-
   }
 
   render() {

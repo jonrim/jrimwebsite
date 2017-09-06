@@ -7,16 +7,19 @@ export default class SuperMario extends Component {
 	render() {
 		return (
 			<Grid.Column className='grid-col' id='col-5'>
-				<div className='work' id='super-mario'>
-				  <div className='work-wrapper'>
-				  	<Label floating color='red'>Technical</Label>
-				    <div className='info'>
-				      <h2>SUPER MARIO BROS. 3 REMAKE</h2>
-				    </div>
-				    <div className='description'>
-			      	
-				    </div>
-				  </div>
+				<div className='col-wrapper'>
+					<div className='work' id='super-mario'>
+					  <div className='work-wrapper'>
+					  	<Label floating color='red'>Technical</Label>
+					    <div className='info'>
+					      <h2>SUPER MARIO BROS. 3 REMAKE</h2>
+					      <p className="subtitle">EXPLORATION OF PHYSICS ENGINES & GAME DESIGN</p>
+					    </div>
+					    <div className='description'>
+				      	
+					    </div>
+					  </div>
+					</div>
 				</div>
 			</Grid.Column>
 		)

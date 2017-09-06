@@ -7,14 +7,17 @@ export default class DownTime extends Component {
 	render() {
 		return (
 			<Grid.Column className='grid-col' id='col-3'>
-				<div className='work' id='downtime'>
-				  <div className='work-wrapper'>
-				    <div className='info'>
-				      <h2>DOWNTIME</h2>
-				    </div>
-				    <div className='description'>
-			      </div>
-				  </div>
+				<div className='col-wrapper'>
+					<div className='work' id='downtime'>
+					  <div className='work-wrapper'>
+					    <div className='info'>
+					      <h2>DOWNTIME</h2>
+					      <p className="subtitle">A REACT NATIVE MOBILE APP THAT TRACKS PRODUCTIVITY BY GEOLOCATION</p>
+					    </div>
+					    <div className='description'>
+				      </div>
+					  </div>
+					</div>
 				</div>
 			</Grid.Column>
 		)

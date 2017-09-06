@@ -20,14 +20,29 @@ body, .app, #landing {
     display: none;
   }
 
+  #col-1, #col-2 {
+    .work {
+      margin: 4px;
+    }
+  }
+
+  #col-3, #col-4, #col-5, #col-6 {
+    .col-wrapper {
+      margin: 4px;
+    }
+  }
+
   .column.grid-col, #col-1, #col-2,
   #col-3, #col-4, #col-5, #col-6 {
     height: 300px;
     overflow: hidden;
     padding: 0 !important;
 
+    .col-wrapper {
+      height: 100%;
+    }
+
     .work {
-      margin: 4px;
       height: 100%;
 
       .floating.label {
@@ -58,10 +73,35 @@ body, .app, #landing {
 
   #col-3, #col-4, #col-5, #col-6 {
     .info {
-      top: 135px;
+      top: 110px;
       position: relative;
+      transition: top 0.5s ease-in-out;
+    }
+
+    .subtitle {
+      color: white;
+      font-weight: 900;
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .clicked {
+      .info {
+        top: 30px;
+      }
+
+      .subtitle {
+        animation: fadeout 0.5s forwards ease-in-out;
+      }
+    }
+
+    .unclicked {
+      .subtitle {
+        animation: fadein 0.5s forwards ease-in-out;
+      }
     }
   }
+
 }
 
 .button {
@@ -166,4 +206,24 @@ body, .app, #landing {
 @include keyframes(fadeout) {
   from { opacity: 1; }
   to   { opacity: 0; }
+}
+
+.makeDim {
+  animation: dimBackground 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.makeBright {
+  animation: brightenBackground 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@include keyframes(dimBackground) {
+  0% { background-color: rgba(0,0,0,0); }
+  100% { background-color: rgba(0,0,0,0.5); }
+}
+
+@include keyframes(brightenBackground) {
+  0% { background-color: rgba(0,0,0,0.5); }
+  100% { background-color: rgba(0,0,0,0); }
 }

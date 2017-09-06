@@ -5,7 +5,6 @@
   img {
     position: relative;
     top: 10px;
-    animation: fadein 0.5s forwards ease-in-out;
     margin: 10px 10%;
     width: 80%;
   }
@@ -90,5 +89,11 @@
 
   .info {
     top: 40px;
+  }
+}
+
+#fresh-aire.unclicked {
+  img {
+    animation: fadein 0.5s forwards ease-in-out;
   }
 }
