@@ -42,7 +42,7 @@ body, .app, #landing {
 
     .col-wrapper {
       margin: 1%;
-      height: 98%;
+      height: 96%;
       width: 98%;
     }
 
@@ -82,11 +82,38 @@ body, .app, #landing {
       transition: top 0.5s ease-in-out;
     }
 
-    .subtitle {
+    .subtitle, .description {
       color: white;
+    }
+
+    .subtitle {
       font-weight: 900;
       width: 60%;
       margin-left: 20%;
+    }
+
+    .description {
+      opacity: 0;
+      width: 70%;
+      margin-left: 15%;
+      visibility: hidden;
+
+      a {
+        color: #24aaf0 !important;
+        font-weight: 700;
+
+        &:hover {
+          color: #0c6b9d !important;
+        }
+      }
+
+      .button {
+        background-color: #ad851a !important;
+        
+        &:hover {
+          background-color: #846615 !important;
+        }
+      }
     }
 
     .clicked {
@@ -97,11 +124,20 @@ body, .app, #landing {
       .subtitle {
         animation: fadeout 0.5s forwards ease-in-out;
       }
+
+      .description {
+        visibility: visible;
+        animation: fadein 0.5s forwards ease-in-out;
+      }
     }
 
     .unclicked {
       .subtitle {
         animation: fadein 0.5s forwards ease-in-out;
+      }
+
+      .description {
+        animation: fadeout 0.5s forwards ease-in-out;
       }
     }
   }

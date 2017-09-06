@@ -213,10 +213,10 @@
 
 @include keyframes(topleft) {
   from { top: calc(50% - 26px); right: 0 }
-  to { top: calc(50% - 130px); right: 50% }
+  to { top: calc(50% - 120px); right: calc(49% - 20px) }
 }
 
 @include keyframes(topleftreverse) {
-  from { top: calc(50% - 130px); right: 50% }
+  from { top: calc(50% - 120px); right: calc(49% - 20px) }
   to { top: calc(50% - 26px); right: 0 }
 }

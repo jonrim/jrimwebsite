@@ -37,6 +37,7 @@ export default class Profile extends Component {
 				<div id='profile-header'>
 				  <img src={require('lib/images/profile.png')} id='profile-img' />
 				  <h1>Jonathan Rim</h1>
+				  <h4>jrim@jonathanrim.com</h4>
 				  <div id='buttons'>
 				    <a href='https://github.com/jonrim' target='_blank'>
 				      <Button className='button button-purple'>
