@@ -61,21 +61,44 @@
     }
 
     @media (min-width: 1200px) {
-      margin: 0 20% !important;
+      margin: 0 !important;
+      display: inline-block;
+      width: 50%;
     }
 
     .column {
-      text-align: center;
-      height: 150px;
-
       img {
         max-height: 100%;
       }
     }
+  }
 
-    .ten.column {
+  @media (min-width: 1200px) {
+    #education {
+      float: left;
+      top: 70px;
+      right: 40px;
+      position: relative;
+    }
+
+    #stack {
+      position: relative;
+      left: 40px;
+    }
+  }
+
+  #education {
+    .ten {
       img {
         max-height: 50%;
+      }
+    }
+  }
+
+  #stack {
+    #express {
+      img {
+        margin-top: 6%;
       }
     }
   }
