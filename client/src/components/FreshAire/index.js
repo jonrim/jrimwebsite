@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Label, Grid } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
 
 import './index.scss';
 
@@ -7,7 +7,7 @@ export default class FreshAire extends Component {
 	render() {
 		return (
 			<Grid.Column className='grid-col' id='col-2'>
-				<div id='fresh-aire'>
+				<div className='work' id='fresh-aire'>
 				  <div className='work-wrapper'>
 				    <img src={require('lib/images/freshaire.png')}></img>
 				    <div className='info'>

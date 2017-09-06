@@ -21,14 +21,30 @@ body, .app, #landing {
   }
 
   .column.grid-col, #col-1, #col-2,
-  #col-3, #col-4, #col-5 {
+  #col-3, #col-4, #col-5, #col-6 {
     height: 300px;
     overflow: hidden;
     padding: 0 !important;
 
-    h4 {
+    .work {
+      margin: 4px;
+      height: 100%;
+
+      .floating.label {
+        top: 1em;
+        right: 1em;
+        left: unset;
+      }
+    }
+
+    h2, h4 {
       font-weight: 900;
       text-align: center;
+    }
+
+    h2 {
+      font-family: 'Encode Sans', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+      color: white;
     }
 
     .subtitle {
@@ -37,6 +53,13 @@ body, .app, #landing {
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  #col-3, #col-4, #col-5, #col-6 {
+    .info {
+      top: 135px;
+      position: relative;
     }
   }
 }

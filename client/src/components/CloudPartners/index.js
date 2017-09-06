@@ -7,7 +7,7 @@ export default class CloudPartners extends Component {
 	render() {
 		return (
 			<Grid.Column className='grid-col' id='col-1'>
-				<div id='cloud-partners'>
+				<div className='work' id='cloud-partners'>
 				  <Label floating color='blue'>Freelance</Label>
 				  <div className='work-wrapper'>
 				    <img src={require('lib/images/top.png')}></img>

@@ -1,9 +1,6 @@
 #fresh-aire {
   background-color: #f9ffeb;
-  border-radius: 5px;
-  margin: 4px;
   font-family: 'Raleway', Arial, sans-serif;
-  height: 100%;
 
   img {
     position: relative;
@@ -26,7 +23,7 @@
     position: absolute;
     left: calc(50% - 71.6px);
     transition: top 0.5s;
-    top: 220px;
+    top: 70%;
   }
 
   .description {
@@ -52,6 +49,24 @@
       top: 65%;
     }
   }
+
+  @media (min-width: 992px) {
+    .info {
+      top: 60%;
+    }
+  }
+
+  @media (min-width: 1220px) {
+    .info {
+      top: 65%;
+    }
+  }
+
+  @media (min-width: 1660px) {
+    .info {
+      top: 70%;
+    }
+  }
 }
 
 #fresh-aire.clicked {
@@ -63,7 +78,7 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     position: absolute;
-    top: 88px;
+    top: 100px;
     left: 0;
     margin-left: 10%;
     width: 80%;
@@ -74,6 +89,6 @@
   }
 
   .info {
-    top: 20px;
+    top: 40px;
   }
 }
