@@ -2,4 +2,14 @@
   background-image: url("../../lib/images/haru.png");
   background-position: center;
   background-size: cover;
+
+  #haru {
+    .button {
+      background-color: #ad851a !important;
+      
+      &:hover {
+        background-color: #846615 !important;
+      }
+    }
+  }
 }

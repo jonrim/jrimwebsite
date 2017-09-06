@@ -2,4 +2,25 @@
   background-image: url("../../lib/images/downtime.png");
   background-position: 50% 100%;
   background-size: cover;
+
+  #downtime {
+    .description {
+      img {
+        width: 25%;
+        position: absolute;
+        bottom: 20px;
+        left: 21px;
+        max-width: 200px;
+        min-width: 100px;
+      }
+    }
+
+    .button {
+      background-color: #25a5e9 !important;
+      
+      &:hover {
+        background-color: #137cb4 !important;
+      }
+    }
+  }
 }

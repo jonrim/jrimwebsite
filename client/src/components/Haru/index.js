@@ -12,13 +12,13 @@ export default class Haru extends Component {
 					  <div className='work-wrapper'>
 					    <div className='info'>
 					      <h2>HARU THE SHIBA INU</h2>
-					      <p className="subtitle">A SIMPLE ECOMMERCE SITE FOR FRIEND'S YOUTUBE CHANNEL</p>
+					      <p className="subtitle">A SIMPLE E-COMMERCE SITE FOR FRIEND'S YOUTUBE CHANNEL</p>
 					    </div>
 					    <div className='description'>
 				      	<p><a href='//harushop.herokuapp.com' target='_blank'>harushop.herokuapp.com</a></p>
 				      	<p>
 				      		<a
-				      			href='https://www.youtube.com/channel/UCYd6CmhFvvq6yruUBmGXjuA/videos'
+				      			href='https://www.youtube.com/channel/UCYd6CmhFvvq6yruUBmGXjuA/feed'
 				      			target='_blank'
 				      		>
 				      			YouTube Channel
