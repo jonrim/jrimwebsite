@@ -1,0 +1,26 @@
+#cloud-partners {
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: 'Montserrat', Arial, sans-serif;
+
+  .floating.label {
+    background-color: #799bd9 !important;
+    top: 1em;
+    right: 1em;
+    left: unset;
+  }
+
+  h4 {
+    color: #799bd9;
+  }
+
+  img {
+    float: left;
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+    animation: fadein 0.5s forwards ease-in-out;
+    margin: 55px 20px;
+  }
+}

@@ -13,119 +13,6 @@ body, .app, #landing {
   margin: 0;
 }
 
-#profile {
-  width: 60%;
-  margin: 0 20%;
-  margin-bottom: 50px;
-  overflow: hidden;
-
-  h1 {
-    font-weight: 900;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-    font-family: 'Raleway', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-  }
-
-  img {
-    width: 30%;
-    border-radius: 20px;
-    float: left;
-  }
-
-  #buttons {
-    width: 50%;
-    margin: 0 10%;
-    margin-left: 40%;
-
-    a:hover, a:focus {
-      text-decoration: none;
-    }
-
-    .fa {
-      margin: 2px;
-      margin-top: -1px;
-    }
-  }
-
-  .button {
-    margin: 0 1%;
-    width: 48%;
-    padding: 10px 5%;
-    border-radius: 24px;
-  }
-
-  @media (max-width: 916px) {
-    img {
-      border-radius: 200px;
-      width: 40%;
-    }
-
-    h1 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 30px;
-    }
-
-    #buttons {
-      width: 54%;
-      margin: 0 2%;
-      margin-left: 42%;
-    }
-
-    .button {
-      font-size: 12px;
-      display: block;
-      margin: 10px 20%;
-      width: 60%;
-    }
-  }
-
-  @media (max-width: 727px) {
-    img {
-      width: 60%;
-      margin: 0 20%;
-      float: none;
-    }
-
-    h1 {
-      margin-top: 20px;
-    }
-
-    #buttons {
-      width: 60%;
-      margin: 0 20%;
-    }
-
-    .button {
-      display: inline-block;
-      margin: 0 1%;
-      width: 48%;
-      padding: 10px 5%;
-    }
-  }
-
-  @media (max-width: 614px) {
-    #buttons {
-      width: 80%;
-      margin: 0 10%;
-    }
-
-    .button {
-      font-size: 12px;
-      display: block;
-      margin: 10px 0;
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 400px) {
-    h1 {
-      font-size: 16px;
-    }
-  }
-}
-
 .grid {
   margin: 0 !important;
 
@@ -148,9 +35,54 @@ body, .app, #landing {
 
     .description {
       visibility: hidden;
-      float: right;
       transition: visibility 0.4s;
       opacity: 0;
+      top: -200px;
+      position: relative;
+      left: 25px;
+    }
+
+    .info {
+      position: relative;
+      right: 0;
+      top: calc(50% - 26px);
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    @media (min-width: 481px) {
+      .description {
+        float: right;
+        top: -21px;
+        right: -16px;
+        position: relative;
+        width: 50%;
+      }
+
+      .info {
+        transition: right 0.5s ease-in-out;
+      }
+    }
+
+    @media (max-width: 427px) {
+      img {
+        width: 100px;
+        margin: 75px 20px;
+      }
+
+      .info {
+        h4, p {
+          font-size: 12px !important;
+        }
+      }
+
+      .description {
+        top: -154px;
+        left: 10px;
+        font-size: 12px !important;
+      }
     }
 
     &:hover {
@@ -158,94 +90,45 @@ body, .app, #landing {
     }
 
     .work-wrapper {
-      width: 90%;
-      margin: 0 5%;
+      width: 80%;
+      margin: 0 10%;
       height: 100%;
     }
   }
 }
 
-#cloud-partners {
-  background-color: aliceblue;
-  border-radius: 5px;
-  margin: 10px;
-  font-family: 'Montserrat', Arial, sans-serif;
-
-  .floating.label {
-    background-color: #799bd9 !important;
-    top: 1em;
-    left: 2.5em;
-  }
-
-  h4 {
-    color: #799bd9;
-  }
-
-  img {
-    float: left;
-    position: relative;
-    left: 0;
-    transition: left 0.5s ease-in-out;
-    animation: fadein 0.5s forwards ease-in-out;
-    margin: 55px 20px;
-  }
-
-  .info {
-    position: relative;
-    right: 0;
-    top: calc(50% - 26px);
-    transition: right 0.5s ease-in-out;
-
-    span {
-      display: inline-block;
+@media (min-width: 990px) and (max-width: 1114px), (max-width: 615px) {
+  .grid {
+    .column {
+      .work-wrapper {
+        width: 90% !important;
+        margin: 0 5% !important;
+      }
     }
   }
+}
 
-  .description {
-    float: right;
-    top: -21px;
-    position: relative;
-    width: 50%;
-  }
-
-  #cloud-partners-btn:checked + label {
-    .description {
-      display: inline-block;
-      max-width: 80%;
-      animation: fadein 0.25s;
-      animation-delay: 0.5s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in-out;
-    } 
-    
-    img {
-      left: -50%;
-      animation: fadeout 0.5s forwards ease-in-out;
-    }
-
-    .info {
-      right: 50%;
+@media (max-width: 916px) {
+  .grid {
+    .column {
+      .work-wrapper {
+        width: 70%;
+        margin: 0 15%;
+      }
     }
   }
+}
 
-  @media (max-width: 916px) {
-    .work-wrapper {
-      width: 70%;
-      margin: 0 15%;
-    }
-  }
-
-  @media (max-width: 543px) {
-    .work-wrapper {
-      width: 90%;
-      margin: 0 5%;
+@media (min-width: 481px) and (max-width: 543px) {
+  .grid {
+    .column {
+      .work-wrapper {
+        width: 90%;
+        margin: 0 5%;
+      }
     }
 
-    .info {
-      top: calc(50% - 45px);
-    }
-
-    &:active {
+    .column.clicked {
       img {
         left: -50%;
         animation: fadeout 0.5s forwards ease-in-out;
@@ -256,30 +139,54 @@ body, .app, #landing {
       }
     }
   }
+}
 
-  @media (max-width: 480px) {
-    .info {
-      transition: none;
-    }
-
-    &:active {
-      .info {  
-        animation: topleft 0.5s forwards ease-in-out;
+@media (max-width: 480px) {
+  .grid {
+    .column.clicked {
+      .info {
+        animation: topleft 0.5s forwards ease-in-out !important;
       }
     }
 
-    &:not(:active) {
-      .info {  
-        animation: topleft 0.5s forwards ease-in-out;
-        animation-direction: reverse;
+    .column.unclicked {
+      .info {
+        animation: topleftreverse 0.5s forwards ease-in-out !important;
       }
     }
   }
+}
 
-  @media (max-width: 367px) {
-    .work-wrapper {
-      width: 96%;
-      margin: 0 2%;
+@media (max-width: 367px) {
+  .grid {
+    .column {
+      .work-wrapper {
+        width: 96%;
+        margin: 0 2%;
+      }
+    }
+  }
+}
+
+#cloud-partners.clicked {
+  .description {
+    display: inline-block;
+    visibility: visible;
+    max-width: 80%;
+    animation: fadein 0.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  } 
+  
+  img {
+    left: -50%;
+    animation: fadeout 0.5s forwards ease-in-out;
+  }
+
+  @media (min-width: 481px) {
+    .info {
+      right: 50%;
     }
   }
 }
@@ -389,6 +296,11 @@ body, .app, #landing {
 }
 
 @include keyframes(topleft) {
-  from { top: calc(50% - 45px); right: 0 }
-  to { top: calc(50% - 100px); right: 50% }
+  from { top: calc(50% - 26px); right: 0 }
+  to { top: calc(50% - 130px); right: 50% }
+}
+
+@include keyframes(topleftreverse) {
+  from { top: calc(50% - 130px); right: 50% }
+  to { top: calc(50% - 26px); right: 0 }
 }
