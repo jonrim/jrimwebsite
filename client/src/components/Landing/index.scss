@@ -98,6 +98,17 @@ body, .app, #landing {
       margin-left: 15%;
       visibility: hidden;
 
+      @media (max-width: 546px) {
+        top: -20px;
+        position: relative;
+      }
+
+      @media (max-width: 385px) {
+        top: -40px;
+        position: relative;
+        font-size: 12px;
+      }
+
       a {
         color: #24aaf0 !important;
         font-weight: 700;

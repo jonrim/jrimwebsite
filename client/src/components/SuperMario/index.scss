@@ -2,4 +2,14 @@
   background-image: url("../../lib/images/smb3.png");
   background-position: center;
   background-size: cover;
+
+  #super-mario {
+    .button {
+      background-color: #db2828 !important;
+      
+      &:hover {
+        background-color: #ad1f1f !important;
+      }
+    }
+  }
 }
