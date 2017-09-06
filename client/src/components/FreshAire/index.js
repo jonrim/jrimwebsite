@@ -12,12 +12,12 @@ export default class FreshAire extends Component {
 				    <img src={require('lib/images/freshaire.png')}></img>
 				    <div className='info'>
 				      <h4>Full Stack Engineer</h4>
-				      <p className="subtitle"><span>Jan 2017</span> - <span>Present</span></p>
+				      <p className='subtitle'><span>Jan 2017</span> - <span>Present</span></p>
 				    </div>
-				    <div className="description">
-				      <p>Currently building the entire client site of Cloud Partners' future platform.</p>
-				      <p>Used for creating and evaluating assessments of interviewees
-				      for companies like Goldman Sachs.</p>
+				    <div className='description'>
+			      	<p><a href='//www.freshaireny.com' target='_blank'>freshaireny.com</a></p>
+				      <p>Built a website for father's company.</p>
+				      <p>Serves as a flyer for clients looking for HVAC services.</p>
 				      <Button>
 				    		More Info
 				    	</Button>

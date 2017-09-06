@@ -8,7 +8,6 @@
   img {
     position: relative;
     top: 10px;
-    transition: top 0.5s ease-in-out;
     animation: fadein 0.5s forwards ease-in-out;
     margin: 10px 10%;
     width: 80%;
@@ -23,11 +22,58 @@
     }
   }
 
+  .info {
+    position: absolute;
+    left: calc(50% - 71.6px);
+    transition: top 0.5s;
+    top: 220px;
+  }
+
   .description {
     visibility: hidden;
     transition: visibility 0.4s;
     opacity: 0;
     top: -200px;
     position: relative;
+  }
+
+  .work-wrapper {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 727px) {
+    .info {
+      top: 60%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .info {
+      top: 65%;
+    }
+  }
+}
+
+#fresh-aire.clicked {
+  .description {
+    display: inline-block;
+    visibility: visible;
+    animation: fadein 0.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    margin-left: 10%;
+    width: 80%;
+  } 
+  
+  img {
+    animation: fadeout 0.1s forwards ease-in-out;
+  }
+
+  .info {
+    top: 20px;
   }
 }

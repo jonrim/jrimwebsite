@@ -22,7 +22,7 @@
     left: 0;
     transition: left 0.5s ease-in-out;
     animation: fadein 0.5s forwards ease-in-out;
-    margin: 55px 20px;
+    margin: 75px 20px;
   }
 
   .button {
@@ -38,7 +38,7 @@
     visibility: hidden;
     transition: visibility 0.4s;
     opacity: 0;
-    top: -175px;
+    top: -200px;
     position: relative;
   }
 
@@ -74,7 +74,7 @@
   @media (max-width: 427px) {
     img {
       height: 100px;
-      margin: 75px 20px;
+      margin: 95px 20px;
     }
 
     .info {
@@ -84,7 +84,7 @@
     }
 
     .description {
-      top: -170px;
+      top: -200px;
       left: 10px;
       font-size: 12px !important;
     }
@@ -97,7 +97,7 @@
   }
 }
 
-@media (min-width: 990px) and (max-width: 1114px), (max-width: 615px) {
+@media (min-width: 992px) and (max-width: 1114px), (max-width: 615px) {
   .grid {
     #cloud-partners {
       .work-wrapper {
@@ -108,7 +108,7 @@
   }
 }
 
-@media (max-width: 916px) {
+@media (max-width: 991px) {
   .grid {
     #cloud-partners {
       .work-wrapper {
