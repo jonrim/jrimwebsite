@@ -21,14 +21,16 @@ body, .app, #landing {
   }
 
   #col-1, #col-2 {
-    .work {
-      margin: 4px;
+    .col-wrapper {
+      border: solid;
+      border-color: #799bd9;
     }
   }
 
-  #col-3, #col-4, #col-5, #col-6 {
+  #col-2 {
     .col-wrapper {
-      margin: 4px;
+      border: solid;
+      border-color: #4CAF50;
     }
   }
 
@@ -39,7 +41,9 @@ body, .app, #landing {
     padding: 0 !important;
 
     .col-wrapper {
-      height: 100%;
+      margin: 1%;
+      height: 98%;
+      width: 98%;
     }
 
     .work {
