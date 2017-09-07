@@ -17,6 +17,7 @@ export default class WorkWork extends Component {
                 <p className="subtitle">JAVASCRIPT LIBRARY THAT CAN RUN COMPUTATION-HEAVY TASKS CONCURRENTLY IN THE BROWSER</p>
               </div>
               <div className='description'>
+                <p><a href='https://workworkjs.github.io/workworkjs/index.html' target='blank'>Check out the demo here</a></p>
                 <p>Assists the native Array.prototype methods by running tasks simultaneously using HTML5 Web Workers.</p>
                 <Button>More Info</Button>
               </div>

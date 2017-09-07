@@ -44,6 +44,10 @@ body, .app, #landing {
       margin: 1%;
       height: 96%;
       width: 98%;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .work {
@@ -68,10 +72,6 @@ body, .app, #landing {
 
     .subtitle {
       text-align: center;
-    }
-
-    &:hover {
-      cursor: pointer;
     }
   }
 

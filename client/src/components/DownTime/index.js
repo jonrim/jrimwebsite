@@ -15,7 +15,7 @@ export default class DownTime extends Component {
                 <p className="subtitle">A REACT NATIVE MOBILE APP THAT TRACKS PRODUCTIVITY BY GEOLOCATION</p>
               </div>
               <div className='description'>
-                <p>Mobile app that saves geolocations and time spent to track productivity and history</p>
+                <p>Mobile app that saves geolocations and time spent to track productivity and history.</p>
                 <Button>More Info</Button>
               </div>
               <img src={require('lib/images/reactnative.png')} />

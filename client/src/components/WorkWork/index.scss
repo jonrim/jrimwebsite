@@ -14,6 +14,27 @@
       min-height: 50px;
     }
 
+    .description {
+      top: -15px;
+      position: relative;
+
+      @media (min-width: 1368px) {
+        top: 5px;
+      }
+
+      @media (min-width: 693px) and (max-width: 991px) {
+        top: -15px;
+      }
+
+      @media (max-width: 455px) {
+        top: -45px;
+      }
+
+      @media (max-width: 403px) {
+        top: -66px;
+      }
+    }
+
     .button {
       background-color: #db2828 !important;
       
