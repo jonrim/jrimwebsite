@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Modal, Segment, Rail } from 'semantic-ui-react';
+import { Button, Modal, Segment, Image } from 'semantic-ui-react';
+import Lightbox from 'react-image-lightbox';
 
 import './index.scss';
 
@@ -7,11 +8,13 @@ export default class StandardModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      lightboxIsOpen: false,
+      photoIndex: 0
     };
   }
 
   render() {
+    const { lightboxIsOpen, photoIndex } = this.state;
     const { showModalHandler, showModal, name, descriptions, challenges } = this.props;
     return (
       <Modal
@@ -25,20 +28,66 @@ export default class StandardModal extends Component {
         <h1>{name}</h1>
         <div className='modal-description'>
           {
-            descriptions.map(description => (
-              <p>{description}</p>
+            descriptions.map((description, index) => (
+              <p key={index}>{description}</p>
             ))
           }
         </div>
         <div className='modal-content'>
-          <h3>CHALLENGES</h3>
+          <h2>CHALLENGES</h2>
           {
             challenges.map((challenge, index) => (
-              <Segment>
-                { challenge }
-                <Rail position={index % 2 ? 'left' : 'right'}>
-                  Image here
-                </Rail>
+              <Segment key={index}>
+                <h3>{challenge.header}</h3>
+                {
+                  challenge.body.map((content, index) => (
+                    <div key={index} className='content-container'>
+                      {
+                        content.pictureType === 'multi' ? (
+                          <div>
+                            <p>{content.text}</p>
+                            <div className='picture-row'>
+                              {
+                                content.pictures.map((picture, index) => (
+                                  <div key={index}>
+                                    <button
+                                      type="button"
+                                      onClick={() => this.setState({ lightboxIsOpen: true, photoIndex: 0 })}
+                                    >
+                                      <Image src={picture} size='small' />
+                                    </button>
+
+                                    {
+                                      lightboxIsOpen &&
+                                      <Lightbox
+                                        mainSrc={content.pictures[photoIndex]}
+                                        nextSrc={content.pictures[(photoIndex + 1) % content.pictures.length]}
+                                        prevSrc={content.pictures[(photoIndex + content.pictures.length - 1) % content.pictures.length]}
+
+                                        onCloseRequest={() => this.setState({ lightboxIsOpen: false, photoIndex: 0 })}
+                                        onMovePrevRequest={() => this.setState({
+                                          photoIndex: (photoIndex + content.pictures.length - 1) % content.pictures.length,
+                                        })}
+                                        onMoveNextRequest={() => this.setState({
+                                          photoIndex: (photoIndex + 1) % content.pictures.length,
+                                        })}
+                                      />
+                                    }
+                                  </div>
+                                ))
+                              }
+                            </div>
+                          </div>
+                        ) : (
+                          <div className='one-image-div'>
+                            <Image floated={ content.pictureType } src={content.picture} size='small' />
+                            <p>{content.text}</p>
+                          </div>
+                        )
+                      }
+                    </div>
+                  ))
+                }
               </Segment>
             ))
           }
