@@ -1,0 +1,19 @@
+.standard-modal {
+  height: 80%;
+  overflow-y: scroll;
+
+  h1 {
+    text-align: center !important;
+    font-weight: 900;
+    font-family: 'Raleway', 'Open Sans', 'Montserrat', Helvetica, Arial, sans-serif !important;
+  }
+
+  .modal-description, .modal-content {
+    padding: 0 10%;
+  }
+
+  .modal-description {
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+  }
+}

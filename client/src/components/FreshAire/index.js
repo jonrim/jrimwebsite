@@ -10,7 +10,7 @@ export default class FreshAire extends Component {
         <div className='col-wrapper'>
           <div className='work' id='fresh-aire'>
             <div className='work-wrapper'>
-              <img src={require('lib/images/freshaire.png')}></img>
+              <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/freshaire_bgia4e.png' />
               <div className='info'>
                 <h4>Full Stack Engineer</h4>
                 <p className='subtitle'><span>Jan 2017</span> - <span>Present</span></p>

@@ -11,7 +11,6 @@ export default class WorkWork extends Component {
           <div className='work' id='workwork'>
             <Label floating color='red'>Technical</Label>
             <div className='work-wrapper'>
-
               <div className='info'>
                 <h2>WORKWORK.JS</h2>
                 <p className="subtitle">JAVASCRIPT LIBRARY THAT CAN RUN COMPUTATION-HEAVY TASKS CONCURRENTLY IN THE BROWSER</p>
@@ -21,7 +20,7 @@ export default class WorkWork extends Component {
                 <p>Assists the native Array.prototype methods by running tasks simultaneously using HTML5 Web Workers.</p>
                 <Button>More Info</Button>
               </div>
-              <img src={require('lib/images/html5.png')} />
+              <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/html5_nepitm.png' />
             </div>
           </div>
         </div>
