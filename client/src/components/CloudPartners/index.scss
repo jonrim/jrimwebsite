@@ -12,8 +12,28 @@
 
   img {
     float: left;
-    position: relative;
-    left: 0;
+    position: absolute;
+
+    @media (max-width: 1280px) {
+      left: calc(50% - 184px);
+    }
+
+    @media (max-width: 991px), (min-width: 1281px) {
+      left: calc(50% - 210px);
+    }
+
+    @media (max-width: 600px) {
+      left: calc(50% - 195px);
+    }
+
+    @media (max-width: 460px) {
+      left: calc(50% - 188px);
+    }
+
+    @media (max-width: 427px) {
+      left: calc(50% - 138px);
+    }
+
     transition: left 0.5s ease-in-out;
     margin: 75px 20px;
   }
@@ -31,13 +51,13 @@
     visibility: hidden;
     transition: visibility 0.4s;
     opacity: 0;
-    top: -200px;
+    top: 89px;
     position: relative;
   }
 
   .info {
-    position: relative;
-    right: 0;
+    position: absolute;
+    left: calc(50% + 10px);
     top: calc(50% - 26px);
 
     span {
@@ -48,13 +68,13 @@
   @media (min-width: 481px) {
     .description {
       float: right;
-      top: 0;
+      top: 51px;
       position: relative;
       width: 50%;
     }
 
     .info {
-      transition: right 0.5s ease-in-out;
+      transition: left 0.5s ease-in-out;
     }
   }
 
@@ -77,7 +97,7 @@
     }
 
     .description {
-      top: -200px;
+      top: 86px;
       left: 10px;
       font-size: 12px !important;
     }
@@ -87,76 +107,25 @@
     width: 80%;
     margin: 0 10%;
     height: 100%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1114px), (max-width: 615px) {
-  .grid {
-    #cloud-partners {
-      .work-wrapper {
-        width: 90% !important;
-        margin: 0 5% !important;
-      }
-    }
-  }
-}
-
-@media (max-width: 991px) {
-  .grid {
-    #cloud-partners {
-      .work-wrapper {
-        width: 70%;
-        margin: 0 15%;
-      }
-    }
-  }
-}
-
-@media (min-width: 481px) and (max-width: 543px) {
-  .grid {
-    #cloud-partners {
-      .work-wrapper {
-        width: 90%;
-        margin: 0 5%;
-      }
+    
+    @media (min-width: 992px) and (max-width: 1114px), (max-width: 615px) {
+      width: 90% !important;
+      margin: 0 5% !important;
     }
 
-    #cloud-partners.clicked {
-      img {
-        left: -50%;
-        animation: fadeout 0.5s forwards ease-in-out;
-      }
-
-      .info {
-        right: 50%;
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    #cloud-partners.clicked {
-      .info {
-        animation: topleft 0.5s forwards ease-in-out !important;
-      }
+    @media (max-width: 991px) {
+      width: 70%;
+      margin: 0 15%;
     }
 
-    #cloud-partners.unclicked {
-      .info {
-        animation: topleftreverse 0.5s forwards ease-in-out !important;
-      }
+    @media (min-width: 481px) and (max-width: 543px) {
+      width: 90%;
+      margin: 0 5%;
     }
-  }
-}
 
-@media (max-width: 367px) {
-  .grid {
-    #cloud-partners {
-      .work-wrapper {
-        width: 96%;
-        margin: 0 2%;
-      }
+    @media (max-width: 367px) {
+      width: 96%;
+      margin: 0 2%;
     }
   }
 }
@@ -171,10 +140,16 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
   } 
-  
+
   img {
     left: -50%;
     animation: fadeout 0.5s forwards ease-in-out;
+  }
+
+  @media (max-width: 480px) {
+    .info {
+      animation: topleft 0.5s forwards ease-in-out !important;
+    }
   }
 
   @media (max-width: 427px) {
@@ -183,9 +158,16 @@
     }
   }
 
+  @media (min-width: 481px) and (max-width: 543px) {
+    img {
+      left: -50%;
+      animation: fadeout 0.5s forwards ease-in-out;
+    }
+  }
+
   @media (min-width: 481px) {
     .info {
-      right: 50%;
+      left: calc(50% - 180px);
     }
   }
 }
@@ -193,6 +175,12 @@
 #cloud-partners.unclicked {
   img {
     animation: fadein 0.5s forwards ease-in-out;
+  }
+
+  @media (max-width: 480px) {
+    .info {
+      animation: topleftreverse 0.5s forwards ease-in-out !important;
+    }
   }
 }
 
@@ -212,11 +200,11 @@
 }
 
 @include keyframes(topleft) {
-  from { top: calc(50% - 26px); right: 0 }
-  to { top: calc(50% - 120px); right: calc(49% - 20px) }
+  from { top: calc(50% - 26px); left: calc(50% + 10px); }
+  to { top: calc(50% - 120px); left: 40px; }
 }
 
 @include keyframes(topleftreverse) {
-  from { top: calc(50% - 120px); right: calc(49% - 20px) }
-  to { top: calc(50% - 26px); right: 0 }
+  from { top: calc(50% - 120px); left: 40px; }
+  to { top: calc(50% - 26px); left: calc(50% + 10px); }
 }
