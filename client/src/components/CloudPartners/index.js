@@ -66,7 +66,7 @@ let challenges = [
                   dropdown if you press enter. If you want to run your own behavior, I found that you have to check to see if the dropdown is closed first by checking the dropdown's class list for an
                   'active' class.`,
         pictureType: 'multi',
-        pictures: ['https://i.gyazo.com/429d28ae8f443a6df61b027b6e3d4885.png']
+        pictures: ['https://i.gyazo.com/429d28ae8f443a6df61b027b6e3d4885.png', 'https://i.gyazo.com/429d28ae8f443a6df61b027b6e3d4885.png']
       },
       {
         text: `SUIR's Grid and Table collections can also want to make you rip your hair out. For Tables, a Header can't be easily styled - even if the job is to just get rid of all of the Header's styles. 

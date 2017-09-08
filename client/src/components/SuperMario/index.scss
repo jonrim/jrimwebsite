@@ -15,6 +15,10 @@
         top: 10px;
       }
 
+      @media (max-width: 596px) {
+        font-size: 12px;
+      }
+
       @media (max-width: 448px) {
         top: -10px;
       }

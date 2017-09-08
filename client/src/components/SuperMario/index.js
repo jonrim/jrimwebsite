@@ -16,8 +16,8 @@ export default class SuperMario extends Component {
                 <p className="subtitle">EXPLORATION OF PHYSICS ENGINES & GAME DESIGN</p>
               </div>
               <div className='description'>
-                <p>Completely remade the first level of Super Mario Bros. 3</p>
-                <p>Focused on building a collision detection system and physics engine that imitate the real game.</p>
+                <p>Completely remade the first level of Super Mario Bros. 3, and also made a unique custom level.</p>
+                <p>Focused on building a collision detection system, a physics engine, and a state machine for animations that imitate the real game.</p>
                 <Button>More Info</Button>
               </div>
             </div>

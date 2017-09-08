@@ -49,10 +49,10 @@ export default class StandardModal extends Component {
                             <div className='picture-row'>
                               {
                                 content.pictures.map((picture, index) => (
-                                  <div key={index}>
+                                  <span key={index}>
                                     <button
                                       type="button"
-                                      onClick={() => this.setState({ lightboxIsOpen: true, photoIndex: 0 })}
+                                      onClick={() => this.setState({ lightboxIsOpen: true, photoIndex: index })}
                                     >
                                       <Image src={picture} size='small' />
                                     </button>
@@ -73,7 +73,7 @@ export default class StandardModal extends Component {
                                         })}
                                       />
                                     }
-                                  </div>
+                                  </span>
                                 ))
                               }
                             </div>

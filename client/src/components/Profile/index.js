@@ -12,17 +12,36 @@ export default class Profile extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.changeScaling.bind(this));
+    if (window.innerWidth >= 500) {
+      setTimeout(() => {
+        let leftCol = document.getElementById('left-education-container');
+        let rightCol = document.getElementById('right-education-container');
+        leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
+        this.forceUpdate();
+      },300);
+    }
     if (window.innerWidth >= 1200) {
       setTimeout(() => {
-        document.getElementById('education').style['top'] = 0.5 * (document.getElementById('stack').offsetHeight - document.getElementById('education').offsetHeight) + 'px';
+        let leftCol = document.getElementById('education');
+        let rightCol = document.getElementById('stack');
+        leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
         this.forceUpdate();
       },300);
     }
   }
 
   changeScaling() {
+    if (window.innerWidth >= 500) {
+      setTimeout(() => {
+        let leftCol = document.getElementById('left-education-container');
+        let rightCol = document.getElementById('right-education-container');
+        leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
+      },300);
+    }
     if (window.innerWidth >= 1200) {
-      document.getElementById('education').style['top'] = 0.5 * (document.getElementById('stack').offsetHeight - document.getElementById('education').offsetHeight) + 'px';
+      let leftCol = document.getElementById('education');
+      let rightCol = document.getElementById('stack');
+      leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
     }
     this.setState({
       screenWidth: window.innerWidth
@@ -64,17 +83,21 @@ export default class Profile extends Component {
             (screenWidth >= 500) ? (
               <Grid columns={2} id='education'>
                 <Grid.Column width={10}>
-                  <a href='https://umich.edu' target='_blank'>
-                    <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/michigan_qbqufw.png' />
-                  </a>
-                  <a href='https://www.fullstackacademy.com' target='_blank'>
-                    <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/fsa_lmxzpy.png' />
-                  </a>
+                  <div id='left-education-container'>
+                    <a href='https://umich.edu' target='_blank'>
+                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/michigan_qbqufw.png' />
+                    </a>
+                    <a href='https://www.fullstackacademy.com' target='_blank'>
+                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/fsa_lmxzpy.png' />
+                    </a>
+                  </div>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                  <a href='https://en.wikipedia.org/wiki/Stuyvesant_High_School' target='_blank'>
-                    <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773171/stuyvesant_paujhu.png' />
-                  </a>
+                  <div id='right-education-container'>
+                    <a href='https://en.wikipedia.org/wiki/Stuyvesant_High_School' target='_blank'>
+                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773171/stuyvesant_paujhu.png' />
+                    </a>
+                  </div>
                 </Grid.Column>
               </Grid>
             ) : (
