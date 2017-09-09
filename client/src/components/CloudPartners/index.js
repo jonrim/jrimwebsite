@@ -7,17 +7,9 @@ import './index.scss';
 export default class CloudPartners extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showModal: false
-    };
-  }
-
-  showModalHandler(bool) {
-    this.setState({showModal: bool});
   }
 
   render() {
-    const { showModal } = this.state;
     return (
       <Grid.Column className='grid-col' id='col-1'>
         <div className='col-wrapper'>
@@ -33,10 +25,9 @@ export default class CloudPartners extends Component {
                 <p>Used for creating and evaluating assessments of interviewees
                 for companies like Goldman Sachs.</p>
                 <StandardModal
-                  showModal={showModal}
-                  showModalHandler={this.showModalHandler.bind(this)}
                   name='CLOUD PARTNERS'
                   descriptions={descriptions}
+                  headerPhotos={headerPhotos}
                   challenges={challenges}
                 />
               </div>
@@ -49,10 +40,17 @@ export default class CloudPartners extends Component {
 }
 
 let descriptions = [
-  'Currently building the Talent Optimization Platform that will be used by companies like Goldman Sachs for creating and evaluating assessments of interviewees.',
-  'Consists of a team of one senior engineer, one software engineer (me), one UI designer, and two other software engineers that are on call.',
-  'We code review for clean, readable and efficient "Don\'t Repeat Yourself" code. We consider reasonable design choices so that we can build a complete working prototype by November and finish by December.'
+  'Currently building the Talent Optimization Platform that will be used by companies for creating and evaluating assessments of interviewees.',
+  'Consists of a team of software engineers and one UI designer.',
+  'Plan on completing a working prototype by November and finishing by December.'
 ];
+
+let headerPhotos = ['https://i.gyazo.com/f30b3637cd6c9493b48ba867ccec810a.png',
+              'https://i.gyazo.com/6b67fc79d0bdec0038f23af46f4be16e.png',
+              'https://i.gyazo.com/54deeef8963f903b76d3b03a1cc8df51.png',
+              'https://i.gyazo.com/c4be6c8ba6552e32b277792bde5f4709.png',
+              'https://i.gyazo.com/1547b973744f3541cbf3c4097fbb28e0.png',
+              'https://i.gyazo.com/70eb55bdad7541870fd440dea598f3fc.png'];
 
 let challenges = [
   {
@@ -65,7 +63,7 @@ let challenges = [
                   dropdown if you press enter. If you want to run your own behavior, I found that you have to check to see if the dropdown is closed first by checking the dropdown's class list for an
                   'active' class.`,
         pictureType: 'multi',
-        pictures: ['https://i.gyazo.com/429d28ae8f443a6df61b027b6e3d4885.png', 'https://i.gyazo.com/429d28ae8f443a6df61b027b6e3d4885.png']
+        pictures: ['https://i.gyazo.com/429d28ae8f443a6df61b027b6e3d4885.png']
       },
       {
         text: `SUIR's Grid and Table collections can also want to make you rip your hair out. For Tables, a Header can't be easily styled - even if the job is to just get rid of all of the Header's styles. 

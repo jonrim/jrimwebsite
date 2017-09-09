@@ -18,19 +18,24 @@
   }
 
   .modal-content {
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    img {
+      margin: 5px !important;
+      height: 80px !important;
+    }
+
     .content-container {
       padding: 10px 0;
-
-      button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-
-        &:focus {
-          outline: none;
-        }
-      }
     }
 
     .one-image-div {

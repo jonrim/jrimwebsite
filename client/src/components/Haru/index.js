@@ -23,7 +23,7 @@ export default class Haru extends Component {
                 <Button className='website-button' icon='world' content='www' />
               </a>
               <div className='description'>
-                <p>Built a static e-commerce page for 28k+ subscribers YouTube channel.</p>
+                <p>Built a static e-commerce page for a 28k+ subscribers YouTube channel.</p>
                 <Button>
                   More Info
                 </Button>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal, Segment, Image } from 'semantic-ui-react';
-import Lightbox from 'react-image-lightbox';
+import LightboxPhoto from '../LightboxPhoto';
 
 import './index.scss';
 
@@ -8,14 +8,40 @@ export default class StandardModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lightboxIsOpen: false,
-      photoIndex: 0
+      photoIndex: 0,
+      showModal: false,
+      lightboxIsOpen: false
     };
+    this.showModalHandler = this.showModalHandler.bind(this);
+    this.lightboxHandler = this.lightboxHandler.bind(this);
+    this.onMovePrevRequest = this.onMovePrevRequest.bind(this);
+    this.onMoveNextRequest = this.onMoveNextRequest.bind(this);
+  }
+
+  showModalHandler(bool) {
+    this.setState({showModal: bool, lightboxIsOpen: false});
+  }
+
+  lightboxHandler(bool, index) {
+    this.setState({ lightboxIsOpen: bool, photoIndex: index });
+  }
+
+  onMovePrevRequest(pictures, photoIndex) {
+    this.setState({
+      photoIndex: (photoIndex + pictures.length - 1) % pictures.length,
+    });
+  }
+
+  onMoveNextRequest(pictures, photoIndex) {
+    this.setState({
+      photoIndex: (photoIndex + 1) % pictures.length,
+    })
   }
 
   render() {
-    const { lightboxIsOpen, photoIndex } = this.state;
-    const { showModalHandler, showModal, name, descriptions, challenges } = this.props;
+    const { photoIndex, showModal, lightboxIsOpen } = this.state;
+    const { name, descriptions, headerPhotos, challenges } = this.props;
+    const { showModalHandler, lightboxHandler, onMovePrevRequest, onMoveNextRequest } = this;
     return (
       <Modal
         trigger={ <Button onClick={e => showModalHandler(true)}>More Info</Button> }
@@ -34,6 +60,14 @@ export default class StandardModal extends Component {
           }
         </div>
         <div className='modal-content'>
+          <LightboxPhoto
+            pictures={headerPhotos}
+            lightboxHandler={lightboxHandler}
+            onMovePrevRequest={onMovePrevRequest}
+            onMoveNextRequest={onMoveNextRequest}
+            lightboxIsOpen={lightboxIsOpen}
+            photoIndex={photoIndex}
+          />
           <h2>CHALLENGES</h2>
           {
             challenges.map((challenge, index) => (
@@ -47,35 +81,6 @@ export default class StandardModal extends Component {
                           <div>
                             <p>{content.text}</p>
                             <div className='picture-row'>
-                              {
-                                content.pictures.map((picture, index) => (
-                                  <span key={index}>
-                                    <button
-                                      type="button"
-                                      onClick={() => this.setState({ lightboxIsOpen: true, photoIndex: index })}
-                                    >
-                                      <Image src={picture} size='small' />
-                                    </button>
-
-                                    {
-                                      lightboxIsOpen &&
-                                      <Lightbox
-                                        mainSrc={content.pictures[photoIndex]}
-                                        nextSrc={content.pictures[(photoIndex + 1) % content.pictures.length]}
-                                        prevSrc={content.pictures[(photoIndex + content.pictures.length - 1) % content.pictures.length]}
-
-                                        onCloseRequest={() => this.setState({ lightboxIsOpen: false, photoIndex: 0 })}
-                                        onMovePrevRequest={() => this.setState({
-                                          photoIndex: (photoIndex + content.pictures.length - 1) % content.pictures.length,
-                                        })}
-                                        onMoveNextRequest={() => this.setState({
-                                          photoIndex: (photoIndex + 1) % content.pictures.length,
-                                        })}
-                                      />
-                                    }
-                                  </span>
-                                ))
-                              }
                             </div>
                           </div>
                         ) : (
