@@ -7,6 +7,21 @@ h1, h2, h3, h4, h5 {
   font-family: inherit !important;
 }
 
+.website-button {
+  border-radius: 12px !important;
+  padding: 10px !important;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+
+  i {
+    font-size: 25px;
+    display: block;
+    width: 80%;
+    margin: 0 10% !important;
+  }
+}
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900);

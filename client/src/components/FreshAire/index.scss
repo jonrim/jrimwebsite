@@ -4,7 +4,7 @@
 
   img {
     position: relative;
-    top: 10px;
+    top: 50px;
     margin: 10px 10%;
     width: 80%;
   }
@@ -22,10 +22,30 @@
     position: absolute;
     left: calc(50% - 71.6px);
     transition: top 0.5s;
-    top: 70%;
+    top: 65%;
 
     h4 {
       color: #4CAF50;
+    }
+
+    @media (max-width: 727px) {
+      top: 60%;
+    }
+
+    @media (max-width: 400px) {
+      top: 65%;
+    }
+
+    @media (min-width: 992px) {
+      top: 60%;
+    }
+
+    @media (min-width: 1220px) {
+      top: 65%;
+    }
+
+    @media (min-width: 1660px) {
+      top: 70%;
     }
   }
 
@@ -39,36 +59,6 @@
 
   .work-wrapper {
     padding-top: 50px;
-  }
-
-  @media (max-width: 727px) {
-    .info {
-      top: 60%;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .info {
-      top: 65%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .info {
-      top: 60%;
-    }
-  }
-
-  @media (min-width: 1220px) {
-    .info {
-      top: 65%;
-    }
-  }
-
-  @media (min-width: 1660px) {
-    .info {
-      top: 70%;
-    }
   }
 }
 

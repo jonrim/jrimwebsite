@@ -23,7 +23,7 @@
       }
 
       @media (min-width: 693px) and (max-width: 991px) {
-        top: -15px;
+        top: 0;
       }
 
       @media (max-width: 455px) {
@@ -36,10 +36,10 @@
     }
 
     .button {
-      background-color: #db2828 !important;
+      background-color: #f65e13 !important;
       
       &:hover {
-        background-color: #ad1f1f !important;
+        background-color: #d64e0a !important;
       }
     }
   }

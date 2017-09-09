@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Label, Grid } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
 import StandardModal from 'lib/components/Modal';
 
 import './index.scss';
@@ -22,7 +22,6 @@ export default class CloudPartners extends Component {
       <Grid.Column className='grid-col' id='col-1'>
         <div className='col-wrapper'>
           <div className='work' id='cloud-partners'>
-            <Label floating color='blue'>Freelance</Label>
             <div className='work-wrapper'>
               <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773171/top_kkzgup.png' />
               <div className='info'>

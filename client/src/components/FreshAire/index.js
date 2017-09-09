@@ -15,8 +15,10 @@ export default class FreshAire extends Component {
                 <h4>Full Stack Engineer</h4>
                 <p className='subtitle'><span>Jan 2017</span> - <span>Present</span></p>
               </div>
+              <a href='//www.freshaireny.com' target='_blank'>
+                <Button className='website-button' icon='world' content='www' />
+              </a>
               <div className='description'>
-                <p><a href='//www.freshaireny.com' target='_blank'>freshaireny.com</a></p>
                 <p>Built a website for father's company.</p>
                 <p>Serves as a flyer for clients looking for HVAC services.</p>
                 <Button>

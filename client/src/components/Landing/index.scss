@@ -36,9 +36,19 @@ body, .app, #landing {
 
   .column.grid-col, #col-1, #col-2,
   #col-3, #col-4, #col-5, #col-6 {
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     padding: 0 !important;
+
+    h2, h4 {
+      font-weight: 900;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Encode Sans', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+      color: white;
+    }
 
     .col-wrapper {
       margin: 1%;
@@ -52,32 +62,22 @@ body, .app, #landing {
 
     .work {
       height: 100%;
-
-      .floating.label {
-        top: 1em;
-        right: 1em;
-        left: unset;
-      }
-    }
-
-    h2, h4 {
-      font-weight: 900;
-      text-align: center;
-    }
-
-    h2 {
-      font-family: 'Encode Sans', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-      color: white;
     }
 
     .subtitle {
       text-align: center;
     }
+
+    .description {
+      @media (max-width: 480px) {
+        top: 120px;
+      }
+    }
   }
 
   #col-3, #col-4, #col-5, #col-6 {
     .info {
-      top: 110px;
+      top: 145px;
       position: relative;
       transition: top 0.5s ease-in-out;
     }

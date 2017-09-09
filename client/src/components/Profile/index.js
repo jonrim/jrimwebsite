@@ -18,7 +18,7 @@ export default class Profile extends Component {
         let rightCol = document.getElementById('right-education-container');
         leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
         this.forceUpdate();
-      },300);
+      }, 100);
     }
     if (window.innerWidth >= 1200) {
       setTimeout(() => {
@@ -26,17 +26,17 @@ export default class Profile extends Component {
         let rightCol = document.getElementById('stack');
         leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
         this.forceUpdate();
-      },300);
+      }, 100);
     }
   }
 
   changeScaling() {
     if (window.innerWidth >= 500) {
-      setTimeout(() => {
-        let leftCol = document.getElementById('left-education-container');
-        let rightCol = document.getElementById('right-education-container');
+      let leftCol = document.getElementById('left-education-container');
+      let rightCol = document.getElementById('right-education-container');
+      if (leftCol && rightCol) {
         leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
-      },300);
+      }
     }
     if (window.innerWidth >= 1200) {
       let leftCol = document.getElementById('education');

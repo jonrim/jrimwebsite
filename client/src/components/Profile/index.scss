@@ -93,8 +93,10 @@
 
   #education {
     .ten {
-      position: relative;
-      
+      #left-education-container {
+        position: relative;
+      }
+
       img {
         max-height: 50%;
       }

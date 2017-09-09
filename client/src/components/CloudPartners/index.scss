@@ -35,7 +35,7 @@
     }
 
     transition: left 0.5s ease-in-out;
-    margin: 75px 20px;
+    margin: 115px 20px;
   }
 
   .button {
@@ -68,7 +68,7 @@
   @media (min-width: 481px) {
     .description {
       float: right;
-      top: 51px;
+      top: 90px;
       position: relative;
       width: 50%;
     }
@@ -87,7 +87,7 @@
   @media (max-width: 427px) {
     img {
       height: 100px;
-      margin: 95px 20px;
+      margin: 140px 20px;
     }
 
     .info {
@@ -201,10 +201,10 @@
 
 @include keyframes(topleft) {
   from { top: calc(50% - 26px); left: calc(50% + 10px); }
-  to { top: calc(50% - 120px); left: 40px; }
+  to { top: calc(50% - 170px); left: calc(50% - 70px); }
 }
 
 @include keyframes(topleftreverse) {
-  from { top: calc(50% - 120px); left: 40px; }
+  from { top: calc(50% - 170px); left: calc(50% - 70px); }
   to { top: calc(50% - 26px); left: calc(50% + 10px); }
 }

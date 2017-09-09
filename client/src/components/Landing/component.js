@@ -40,6 +40,11 @@ export default class Landing extends Component {
           }
         }
       });
+      if (col.getElementsByClassName('website-button')[0]) {
+        col.getElementsByClassName('website-button')[0].addEventListener('click', e => {
+          e.stopPropagation();
+        });
+      }
     });
 
     window.addEventListener('resize', () => {
