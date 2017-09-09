@@ -7,18 +7,35 @@ h1, h2, h3, h4, h5 {
   font-family: inherit !important;
 }
 
-.website-button {
+.website-button, .youtube-button {
   border-radius: 12px !important;
-  padding: 10px !important;
   position: absolute;
   bottom: 20px;
-  right: 15px;
+  height: 55px;
+  width: 55px;
 
   i {
-    font-size: 25px;
     display: block;
+  }
+}
+
+.website-button {
+  right: 15px;
+  padding: 10px !important;
+  
+  i {
+    font-size: 25px;
     width: 80%;
     margin: 0 10% !important;
+  }
+}
+
+.youtube-button {
+  right: 80px;
+  padding: 7px !important;
+
+  i {
+    font-size: 37px;
   }
 }
 
