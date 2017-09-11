@@ -24,19 +24,23 @@ export default class StandardModal extends Component {
     // have a state variable called 'updated' so that this doesn't run for every updated property
     if (!this.state.updated) {
       let challengeContents = document.getElementsByClassName('challenge-contents');
-      // Resize the height of each 'Challenge' section when the window resizes
-      window.addEventListener('resize', e => {
-        Array.from(challengeContents).forEach(challenge => {
-          challenge.style['max-height'] = challenge.querySelector('h3').offsetHeight + 29 + 'px';
-        });
-      });
-      // Expand on click
       if (challengeContents && challengeContents.length > 0) {
+        // Resize the height of each 'Challenge' section when the window resizes
+        window.addEventListener('resize', e => {
+          Array.from(challengeContents).forEach(challenge => {
+            if (!challenge.classList.contains('expand')) {
+              challenge.style['max-height'] = challenge.querySelector('h3').offsetHeight + 29 + 'px';
+            }
+          });
+        });
+        // Expand on click
         Array.from(challengeContents).forEach(challenge => {
           challenge.style['max-height'] = challenge.querySelector('h3').offsetHeight + 29 + 'px';
           challenge.addEventListener('click', e => {
             if (e.target.tagName !== 'IMG') {
               challenge.classList.toggle('expand');
+              challenge.style['max-height'] = challenge.classList.contains('expand') ? '1000px' : 
+                                              challenge.querySelector('h3').offsetHeight + 29 + 'px';
             }
           });
         });

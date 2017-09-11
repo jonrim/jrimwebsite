@@ -11,7 +11,7 @@ export default class Haru extends Component {
           <div className='work' id='haru'>
             <div className='work-wrapper'>
               <div className='info'>
-                <h2>HARU THE SHIBA INU</h2>
+                <h2>HARU THE SHIBA INU'S SHOP</h2>
                 <p className="subtitle">A STATIC E-COMMERCE PAGE FOR A YOUTUBE CHANNEL</p>
               </div>
               <a href='https://www.youtube.com/channel/UCYd6CmhFvvq6yruUBmGXjuA/feed' target='_blank'>
