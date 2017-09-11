@@ -2,7 +2,13 @@
   height: 80%;
   overflow-y: scroll;
 
-  h1, h2, h3 {
+  .close.icon {
+    top: 15px;
+    right: 15px;
+    color: #000;
+  }
+
+  h1, h2, h3, h4 {
     text-align: center !important;
     font-weight: 900;
     font-family: 'Raleway', 'Open Sans', 'Montserrat', Helvetica, Arial, sans-serif !important;
@@ -15,23 +21,50 @@
   .modal-description {
     border-top: solid 2px #ebebeb;
     border-bottom: solid 2px #ebebeb;
+
+    p {
+      margin: 0 1em 1em;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button.left {
+    float: left;
+  }
+
+  button.right {
+    float: right;
+  }
+
+  img {
+    margin: 5px !important;
+    height: 80px !important;
+    object-fit: cover;
   }
 
   .modal-content {
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
+    .challenge-contents {
+      max-height: 52px;
+      overflow: hidden;
+      transition: all .3s ease;
 
-      &:focus {
-        outline: none;
+      &:hover {
+        cursor: pointer;
       }
     }
 
-    img {
-      margin: 5px !important;
-      height: 80px !important;
+    .challenge-contents.expand {
+      max-height: 1500px;
     }
 
     .content-container {

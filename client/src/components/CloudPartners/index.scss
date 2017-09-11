@@ -184,27 +184,12 @@
   }
 }
 
-@mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {
-    @content;
-  }
-  @-moz-keyframes #{$animationName} {
-    @content;
-  }
-  @-o-keyframes #{$animationName} {
-    @content;
-  }
-  @keyframes #{$animationName} {
-    @content;
-  }
-}
-
-@include keyframes(topleft) {
+@keyframes topleft {
   from { top: calc(50% - 26px); left: calc(50% + 10px); }
   to { top: calc(50% - 170px); left: calc(50% - 70px); }
 }
 
-@include keyframes(topleftreverse) {
+@keyframes topleftreverse {
   from { top: calc(50% - 170px); left: calc(50% - 70px); }
   to { top: calc(50% - 26px); left: calc(50% + 10px); }
 }

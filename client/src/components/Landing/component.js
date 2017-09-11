@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Label, Grid } from 'semantic-ui-react';
+import objectFitImages from 'object-fit-images';
 
 import Profile from '../Profile';
 import CloudPartners from '../CloudPartners';
@@ -15,11 +16,12 @@ export default class Landing extends Component {
   }
 
   componentDidMount() {
+    objectFitImages();
     Array.from(document.getElementsByClassName('grid-col')).forEach((col, index) => {
       // col's direct child is col-wrapper that is used for setting the background
       // col-wrapper's child is 'work' that will have classes added and removed from it
       // this lets the background's opacity change on click only for cols 3-6
-      col = col.children[0].children[0];
+      col = col.firstChild.firstChild;
       col.addEventListener('click', e => {
         if (col.classList.contains('clicked')) {
           col.classList.remove('clicked');
@@ -38,8 +40,8 @@ export default class Landing extends Component {
           }
         }
       });
-      if (col.getElementsByClassName('website-button')[0]) {
-        col.getElementsByClassName('website-button')[0].addEventListener('click', e => {
+      if (col.querySelector('.website-button')) {
+        col.querySelector('.website-button').addEventListener('click', e => {
           e.stopPropagation();
         });
       }
@@ -48,7 +50,7 @@ export default class Landing extends Component {
     window.addEventListener('resize', () => {
       if (window.innerWidth < 520) {
         Array.from(document.getElementsByClassName('grid-col')).forEach(col => {
-          col.children[0].children[0].classList.remove('unclicked');
+          col.firstChild.firstChild.classList.remove('unclicked');
         });
       }
     });
