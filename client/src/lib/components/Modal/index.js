@@ -23,28 +23,31 @@ export default class StandardModal extends Component {
   componentDidUpdate() {
     // have a state variable called 'updated' so that this doesn't run for every updated property
     if (!this.state.updated) {
+      let introductionContents = document.getElementsByClassName('introduction-contents');
       let challengeContents = document.getElementsByClassName('challenge-contents');
-      if (challengeContents && challengeContents.length > 0) {
-        // Resize the height of each 'Challenge' section when the window resizes
-        window.addEventListener('resize', e => {
-          Array.from(challengeContents).forEach(challenge => {
-            if (!challenge.classList.contains('expand')) {
-              challenge.style['max-height'] = challenge.querySelector('h3').offsetHeight + 29 + 'px';
-            }
+      [introductionContents, challengeContents].forEach(section => {
+        if (section && section.length > 0) {
+          // Resize the height of each 'Challenge' section when the window resizes
+          window.addEventListener('resize', e => {
+            Array.from(section).forEach(subsection => {
+              if (!subsection.classList.contains('expand')) {
+                subsection.style['max-height'] = subsection.querySelector('h4').offsetHeight + 29 + 'px';
+              }
+            });
           });
-        });
-        // Expand on click
-        Array.from(challengeContents).forEach(challenge => {
-          challenge.style['max-height'] = challenge.querySelector('h3').offsetHeight + 29 + 'px';
-          challenge.addEventListener('click', e => {
-            if (e.target.tagName !== 'IMG') {
-              challenge.classList.toggle('expand');
-              challenge.style['max-height'] = challenge.classList.contains('expand') ? '1000px' : 
-                                              challenge.querySelector('h3').offsetHeight + 29 + 'px';
-            }
+          // Expand on click
+          Array.from(section).forEach(subsection => {
+            subsection.style['max-height'] = subsection.querySelector('h4').offsetHeight + 29 + 'px';
+            subsection.addEventListener('click', e => {
+              if (e.target.tagName !== 'IMG') {
+                subsection.classList.toggle('expand');
+                subsection.style['max-height'] = subsection.classList.contains('expand') ? '1000px' : 
+                                                subsection.querySelector('h4').offsetHeight + 29 + 'px';
+              }
+            });
           });
-        });
-      }
+        }
+      });
       this.setState({updated: true});
     }
   }
@@ -77,7 +80,7 @@ export default class StandardModal extends Component {
 
   render() {
     const { photoIndex, showModal, lightboxIsOpen } = this.state;
-    const { name, descriptions, headerPhotos, challenges } = this.props;
+    const { name, descriptions, headerPhotos, introduction, challenges } = this.props;
     const { showModalHandler, lightboxHandler, onMovePrevRequest, onMoveNextRequest } = this;
     return (
       <Modal
@@ -92,7 +95,17 @@ export default class StandardModal extends Component {
         <div className='modal-description'>
           {
             descriptions.map((description, index) => (
-              <p key={index}>{description}</p>
+              <div key={index}>
+                {
+                  description.slice(0,5) === 'https' ? (
+                    <a href={description} target='_blank'>{description}</a>
+                  ) : description.slice(0,3) === 'www' ? (
+                    <a href={'//' + description} target='_blank'>{description}</a>
+                  ) : (
+                    <p key={index}>{description}</p>
+                  )
+                }
+              </div>
             ))
           }
           <LightboxPhoto
@@ -106,61 +119,72 @@ export default class StandardModal extends Component {
           />
         </div>
         <div className='modal-content'>
-          <h2>CHALLENGES</h2>
           {
-            challenges.map((challenge, index) => (
-              <Segment key={index} className='challenge-contents'>
-                <h3>{challenge.header}</h3>
+            [introduction, challenges].map((section, index) => (
+              <div className='modal-section' key={index}>
                 {
-                  challenge.body.map((content, index) => (
-                    <div key={index} className='content-container'>
-                      {
-                        content.pictureType === 'multi' ? (
-                          <div>
-                            <p>{content.text}</p>
-                            <div className='picture-row'>
-                              <LightboxPhoto
-                                pictures={content.pictures}
-                                lightboxHandler={lightboxHandler}
-                                onMovePrevRequest={onMovePrevRequest}
-                                onMoveNextRequest={onMoveNextRequest}
-                                lightboxIsOpen={lightboxIsOpen}
-                                photoIndex={photoIndex}
-                              />
-                            </div>
-                          </div>
-                        ) : (
-                          <div className='one-image-div'>
-                            {
-                              content.picture && 
-                              <div>
-                                <button
-                                  style={
-                                    {
-                                      float: content.pictureType
-                                    }
-                                  }
-                                  type="button"
-                                  onClick={e => {e.stopPropagation(); lightboxHandler(true, content.picture, 0);}}
-                                >
-                                  <Image floated={ content.pictureType } src={content.picture} size='small' />
-                                </button>
-                                { lightboxIsOpen[content.picture] &&
-                                  <Lightbox
-                                    mainSrc={content.picture}
-                                    onCloseRequest={e => lightboxHandler(false, content.picture, 0)}
-                                  />
+                  section && 
+                  <div>
+                    <h2>{section === introduction ? 'INTRODUCTION' : 'CHALLENGES'}</h2>
+                    {
+                      section.map((subsection, index) => (
+                        <Segment key={index} className={(section === introduction ? 'introduction' : 'challenge') +'-contents'}>
+                          <h4>{subsection.header}</h4>
+                          {
+                            subsection.body.map((content, index) => (
+                              <div key={index} className='content-container'>
+                                {
+                                  content.pictureType === 'multi' ? (
+                                    <div>
+                                      <p>{content.text}</p>
+                                      <div className='picture-row'>
+                                        <LightboxPhoto
+                                          pictures={content.pictures}
+                                          lightboxHandler={lightboxHandler}
+                                          onMovePrevRequest={onMovePrevRequest}
+                                          onMoveNextRequest={onMoveNextRequest}
+                                          lightboxIsOpen={lightboxIsOpen}
+                                          photoIndex={photoIndex}
+                                        />
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <div className='one-image-div'>
+                                      {
+                                        content.picture && 
+                                        <div>
+                                          <button
+                                            style={
+                                              {
+                                                float: content.pictureType
+                                              }
+                                            }
+                                            type="button"
+                                            onClick={e => {e.stopPropagation(); lightboxHandler(true, content.picture, 0);}}
+                                          >
+                                            <Image floated={ content.pictureType } src={content.picture} size='small' />
+                                          </button>
+                                          { lightboxIsOpen[content.picture] &&
+                                            <Lightbox
+                                              mainSrc={content.picture}
+                                              onCloseRequest={e => lightboxHandler(false, content.picture, 0)}
+                                            />
+                                          }
+                                        </div>
+                                      }
+                                      <p>{content.text}</p>
+                                    </div>
+                                  )
                                 }
                               </div>
-                            }
-                            <p>{content.text}</p>
-                          </div>
-                        )
-                      }
-                    </div>
-                  ))
+                            ))
+                          }
+                        </Segment>
+                      ))
+                    }
+                  </div>
                 }
-              </Segment>
+              </div>
             ))
           }
         </div>

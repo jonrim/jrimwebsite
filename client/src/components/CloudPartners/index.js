@@ -45,12 +45,14 @@ let descriptions = [
   'Plan on completing a working prototype by November and finishing by December.'
 ];
 
-let headerPhotos = ['https://i.gyazo.com/f30b3637cd6c9493b48ba867ccec810a.png',
-              'https://i.gyazo.com/6b67fc79d0bdec0038f23af46f4be16e.png',
-              'https://i.gyazo.com/54deeef8963f903b76d3b03a1cc8df51.png',
-              'https://i.gyazo.com/c4be6c8ba6552e32b277792bde5f4709.png',
-              'https://i.gyazo.com/1547b973744f3541cbf3c4097fbb28e0.png',
-              'https://i.gyazo.com/70eb55bdad7541870fd440dea598f3fc.png'];
+let headerPhotos = [
+  'https://i.gyazo.com/f30b3637cd6c9493b48ba867ccec810a.png',
+  'https://i.gyazo.com/6b67fc79d0bdec0038f23af46f4be16e.png',
+  'https://i.gyazo.com/54deeef8963f903b76d3b03a1cc8df51.png',
+  'https://i.gyazo.com/c4be6c8ba6552e32b277792bde5f4709.png',
+  'https://i.gyazo.com/1547b973744f3541cbf3c4097fbb28e0.png',
+  'https://i.gyazo.com/70eb55bdad7541870fd440dea598f3fc.png'
+];
 
 let challenges = [
   {

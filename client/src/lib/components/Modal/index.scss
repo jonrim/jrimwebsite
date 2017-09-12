@@ -22,7 +22,8 @@
     border-top: solid 2px #ebebeb;
     border-bottom: solid 2px #ebebeb;
 
-    p {
+    a, p {
+      display: block;
       margin: 0 1em 1em;
     }
   }
@@ -53,8 +54,12 @@
   }
 
   .modal-content {
-    .challenge-contents {
-      max-height: 52px;
+    .modal-section {
+      margin-bottom: 30px;
+    }
+
+    .introduction-contents, .challenge-contents {
+      max-height: 47px;
       overflow: hidden;
       transition: all .3s ease;
 

@@ -38,15 +38,18 @@ export default class FreshAire extends Component {
 }
 
 let descriptions = [
+  `www.freshaireny.com`,
   `Built a website for my father's company. Focused on responsive design as well as cross-browser
     compatibility. For Internet Explorer, only versions 10 and 11 are supported.`
 ];
 
-let headerPhotos = ['https://i.gyazo.com/9b62dd9ca6d2157cda8cb06f30be5ee3.jpg',
-                    'https://i.gyazo.com/1de945a829f49cae4c327619b5e901b2.jpg',
-                    'https://i.gyazo.com/3db11bd114affdb9c5ca21556b97ecc5.png',
-                    'https://i.gyazo.com/a57d8baff018cf69e491b9a3d526f815.png',
-                    'https://i.gyazo.com/e139405f3769cf179a0b32a07a591805.png'];
+let headerPhotos = [
+  'https://i.gyazo.com/9b62dd9ca6d2157cda8cb06f30be5ee3.jpg',
+  'https://i.gyazo.com/1de945a829f49cae4c327619b5e901b2.jpg',
+  'https://i.gyazo.com/3db11bd114affdb9c5ca21556b97ecc5.png',
+  'https://i.gyazo.com/a57d8baff018cf69e491b9a3d526f815.png',
+  'https://i.gyazo.com/e139405f3769cf179a0b32a07a591805.png'
+];
 
 let challenges = [
   {
@@ -54,13 +57,13 @@ let challenges = [
     body: [
       {
         text: `Bootstrap's navbar is broken down into two elements: the entire container, and the inside contents.
-        How do you make the navbar's opacity change smoothly based on scroll position (the more you scroll down,
-        the opacity increases), while still making it so that only the contents' opacity is fixed at a certain 
-        percentage for mobile devices (The hamburger menu on mobile uses the inside contents, so it can't be completely
-        transparent on mobile)? How do you successfully reset the opacity when you visit a different page? 
-        How do you change the text's color from white to black based on scroll position? If you login and log 
-        back out, the login button is actually the wrong color since you have to iterate through each item and 
-        change its color manually. I had to check different edge cases to make sure the navbar worked as intended.`
+              How do you make the navbar's opacity change smoothly based on scroll position (the more you scroll down,
+              the opacity increases), while still making it so that only the contents' opacity is fixed at a certain 
+              percentage for mobile devices (The hamburger menu on mobile uses the inside contents, so it can't be completely
+              transparent on mobile)? How do you correctly reset the opacity when you visit a different page? 
+              How do you transition the text's color from white to black based on scroll position? If you login and log 
+              back out, the login button is actually the wrong color since you have to iterate through each item and 
+              change its color manually. I had to check different edge cases to make sure the navbar worked as intended.`
       }
     ]
   },
