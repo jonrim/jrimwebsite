@@ -12,7 +12,8 @@ export default class StandardModal extends Component {
     this.state = {
       photoIndex: 0,
       showModal: false,
-      lightboxIsOpen: {description: false},
+      lightboxIsOpen: {},
+      closeOnEscape: true,
       updated: false
     };
     this.showModalHandler = this.showModalHandler.bind(this);
@@ -32,18 +33,18 @@ export default class StandardModal extends Component {
           window.addEventListener('resize', e => {
             Array.from(section).forEach(subsection => {
               if (!subsection.classList.contains('expand')) {
-                subsection.style['max-height'] = subsection.querySelector('h4').offsetHeight + 29 + 'px';
+                subsection.style['max-height'] = subsection.querySelector('h5').offsetHeight + 29 + 'px';
               }
             });
           });
           // Expand on click
           Array.from(section).forEach(subsection => {
-            subsection.style['max-height'] = subsection.querySelector('h4').offsetHeight + 29 + 'px';
+            subsection.style['max-height'] = subsection.querySelector('h5').offsetHeight + 29 + 'px';
             subsection.addEventListener('click', e => {
               if (e.target.tagName !== 'IMG') {
                 subsection.classList.toggle('expand');
                 subsection.style['max-height'] = subsection.classList.contains('expand') ? '1000px' : 
-                                                subsection.querySelector('h4').offsetHeight + 29 + 'px';
+                                                subsection.querySelector('h5').offsetHeight + 29 + 'px';
               }
             });
           });
@@ -54,17 +55,23 @@ export default class StandardModal extends Component {
   }
 
   showModalHandler(bool) {
-    this.setState({showModal: bool, lightboxIsOpen: false, updated: false});
+    this.setState({showModal: bool, lightboxIsOpen: {}, updated: false, closeOnEscape: true});
   }
 
   lightboxHandler(bool, name, index) {
     this.setState({photoIndex: index}, () => {
-      this.setState({lightboxIsOpen:
-        {
+      this.setState({
+        lightboxIsOpen: {
           [name]: bool
-        }
+        },
+        closeOnEscape: false
       });
     });
+    if (!bool) {
+      setTimeout(() => {
+        this.setState({closeOnEscape: true})
+      }, 100);
+    }
   }
 
   onMovePrevRequest(pictures, photoIndex) {
@@ -80,7 +87,7 @@ export default class StandardModal extends Component {
   }
 
   render() {
-    const { photoIndex, showModal, lightboxIsOpen } = this.state;
+    const { photoIndex, showModal, lightboxIsOpen, closeOnEscape } = this.state;
     const { name, descriptions, headerPhotos, videos, introduction, challenges } = this.props;
     const { showModalHandler, lightboxHandler, onMovePrevRequest, onMoveNextRequest } = this;
     return (
@@ -90,6 +97,7 @@ export default class StandardModal extends Component {
         open={showModal}
         size='large'
         closeIcon
+        closeOnEscape={closeOnEscape}
         onClose={e => showModalHandler(false)}
       >
         <h1>{name}</h1>
@@ -122,6 +130,7 @@ export default class StandardModal extends Component {
             {
               videos && videos.map(video => (
                 <YouTube
+                  key={video}
                   videoId={video}
                 />
               )) 
@@ -139,7 +148,7 @@ export default class StandardModal extends Component {
                     {
                       section.map((subsection, index) => (
                         <Segment key={index} className={(section === introduction ? 'introduction' : 'challenge') +'-contents'}>
-                          <h4>{subsection.header}</h4>
+                          <h5>{subsection.header}</h5>
                           {
                             subsection.body.map((content, index) => (
                               <div key={index} className='content-container'>

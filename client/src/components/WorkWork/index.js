@@ -125,11 +125,11 @@ let challenges = [
       {
         text: `You probably noticed that really long regular expression right after 'obj.fn.match'
               on line 5. The backslashes look like they make up more than half of that expression. Regular
-              expressions use backslashes to denote a token. e.g. '\s' denotes a whitespace instead of
+              expressions use backslashes to denote a token. e.g. '\\s' denotes a whitespace instead of
               the regular 's' letter. But what happens when the regular expression (which is a string),
               is inside another string (the data that was sent to the worker)? We now need to use double
               escaped characters, since the escaped characters need to be escaped again, otherwise the
-              regular expression will think that a '\s' is actually just an 's'.`,
+              regular expression will think that a '\\s' is actually just an 's'.`,
         pictureType: 'right',
         picture: 'https://i.gyazo.com/5b7eecf21af0787def383a5647da4704.png'
       }
