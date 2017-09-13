@@ -136,7 +136,15 @@ export default class StandardModal extends Component {
                                 {
                                   content.pictureType === 'multi' ? (
                                     <div>
-                                      <p>{content.text}</p>
+                                      {
+                                        content.text.slice(0,5) === 'https' ? (
+                                          <a href={content.text} target='_blank'>{content.text}</a>
+                                        ) : content.text.slice(0,3) === 'www' ? (
+                                          <a href={'//' + content.text} target='_blank'>{content.text}</a>
+                                        ) : (
+                                          <p>{content.text}</p>
+                                        )
+                                      }
                                       <div className='picture-row'>
                                         <LightboxPhoto
                                           pictures={content.pictures}
@@ -172,7 +180,15 @@ export default class StandardModal extends Component {
                                           }
                                         </div>
                                       }
-                                      <p>{content.text}</p>
+                                      {
+                                        content.text.slice(0,5) === 'https' ? (
+                                          <a href={content.text} target='_blank'>{content.text}</a>
+                                        ) : content.text.slice(0,3) === 'www' ? (
+                                          <a href={'//' + content.text} target='_blank'>{content.text}</a>
+                                        ) : (
+                                          <p>{content.text}</p>
+                                        )
+                                      }
                                     </div>
                                   )
                                 }

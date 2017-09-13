@@ -38,7 +38,8 @@ export default class WorkWork extends Component {
 }
 
 let descriptions = [
-  `https://workworkjs.github.io/workworkjs/`,
+  `https://workworkjs.github.io/workworkjs`,
+  `https://github.com/workworkjs/workworkjs`,
   `A Javascript library that can run computation-heavy tasks simultaneously in a browser.`,
   `Uses HTML5 Web Workers, Regular Expressions, and sample algorithms.`,
   `Faster and simpler than a previously existing library (Parallel.js)!`
@@ -99,8 +100,7 @@ let introduction = [
       {
         text: `WorkWork's array methods are used exactly the same as Javascript's native methods,
               except that since they run algorithms asynchronously, we need to include a promise
-              right after the method call to get the results. See the demo for more details
-              (link at the top).`,
+              right after the method call to get the results.`,
         pictureType: 'right',
         picture: 'https://i.gyazo.com/5c438a1d04bbc0956c521015cd0cc7a2.png'
       },
