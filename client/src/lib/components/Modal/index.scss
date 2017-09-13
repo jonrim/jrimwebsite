@@ -14,20 +14,6 @@
     font-family: 'Raleway', 'Open Sans', 'Montserrat', Helvetica, Arial, sans-serif !important;
   }
 
-  .modal-description, .modal-content {
-    padding: 25px 2%;
-  }
-
-  .modal-description {
-    border-top: solid 2px #ebebeb;
-    border-bottom: solid 2px #ebebeb;
-
-    a, p {
-      display: block;
-      margin: 0 1em 1em;
-    }
-  }
-
   button {
     background: none;
     border: none;
@@ -51,6 +37,31 @@
     margin: 5px !important;
     height: 80px !important;
     object-fit: cover;
+  }
+
+  .modal-description, .modal-content {
+    padding: 25px 2%;
+  }
+
+  .modal-description {
+    border-top: solid 2px #ebebeb;
+    border-bottom: solid 2px #ebebeb;
+
+    a, p {
+      display: block;
+      margin: 0 1em 1em;
+    }
+
+    .videos {
+      text-align: center;
+
+      iframe {
+        display: inline-block;
+        width: 500px;
+        max-width: 100%;
+        height: 300px;
+      }
+    }
   }
 
   .modal-content {

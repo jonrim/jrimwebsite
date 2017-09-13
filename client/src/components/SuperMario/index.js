@@ -22,6 +22,7 @@ export default class SuperMario extends Component {
                   name='SUPER MARIO BROS. 3 REMAKE'
                   descriptions={descriptions}
                   headerPhotos={headerPhotos}
+                  videos={videos}
                   introduction={introduction}
                   challenges={challenges}
                 />
@@ -46,6 +47,12 @@ let headerPhotos = [
   'http://i.imgur.com/b6DZx09.png',
   'http://i.imgur.com/Qe92C3Q.png',
   'http://i.imgur.com/7jutNQX.png',
+  'https://i.gyazo.com/3b76c01fbe59d368373b8c61bd3e5ab3.png'
+];
+
+let videos = [
+  'QM4iBkEAta0',
+  'HeifWjcACUk'
 ];
 
 let introduction = [

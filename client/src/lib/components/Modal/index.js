@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Modal, Segment, Image } from 'semantic-ui-react';
 import LightboxPhoto from '../LightboxPhoto';
 import Lightbox from 'react-image-lightbox';
+import YouTube from 'react-youtube';
 
 import './index.scss';
 
@@ -80,7 +81,7 @@ export default class StandardModal extends Component {
 
   render() {
     const { photoIndex, showModal, lightboxIsOpen } = this.state;
-    const { name, descriptions, headerPhotos, introduction, challenges } = this.props;
+    const { name, descriptions, headerPhotos, videos, introduction, challenges } = this.props;
     const { showModalHandler, lightboxHandler, onMovePrevRequest, onMoveNextRequest } = this;
     return (
       <Modal
@@ -117,6 +118,15 @@ export default class StandardModal extends Component {
             lightboxIsOpen={lightboxIsOpen}
             photoIndex={photoIndex}
           />
+          <div className='videos'>
+            {
+              videos && videos.map(video => (
+                <YouTube
+                  videoId={video}
+                />
+              )) 
+            }
+          </div>
         </div>
         <div className='modal-content'>
           {
