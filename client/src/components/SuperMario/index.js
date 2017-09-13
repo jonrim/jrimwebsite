@@ -133,10 +133,10 @@ let challenges = [
       {
         text: `This was an incredibly difficult project but also very, very rewarding. There were so many small things like: letting the player control the height of a jump based on how long the jump
               button is held down. Let the player grab onto an enemy shell without accidentally dying if he/she collides with it horizontally while holding down the run button. Don't let the player
-              accidentally die if he/she jumps on top of an enemy at a very high speed (Frames are limited: in one frame, the player can be above the enemy, but on the very next frame, the player
-              can be completely overlapping the enemy. How do you determine if the player messed up, or if the player simply wanted to jump on the enemy?) How do I seamlessly transition animations
-              for the small Mario, the big Mario, and tanooki Mario? How do I change Mario's hitbox when he crouches so that if I'm running and immediately crouch, I can slide underneath a block,
-              while also using the tanooki suit's attack move? How can I....zzZZZ`,
+              accidentally die if he/she jumps on top of an enemy at a very high speed. Frames are limited: in one frame, the player can be above the enemy, but on the very next frame, the player
+              can be completely overlapping the enemy. At high speeds, the player can even pass completely through the enemy in between frames. How do you determine if the player messed up, or
+              if the player simply wanted to jump on the enemy? How do I seamlessly transition animations for the small Mario, the big Mario, and tanooki Mario? How do I change Mario's hitbox 
+              when he crouches so that if I'm running and immediately crouch, I can slide underneath a block, while also using the tanooki suit's attack move? How can I....zzZZZ`,
       },
       {
         text: `Thank you for reading!`
