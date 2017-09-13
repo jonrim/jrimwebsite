@@ -99,9 +99,9 @@ export default class StandardModal extends Component {
               <div key={index}>
                 {
                   description.slice(0,5) === 'https' ? (
-                    <a href={description} target='_blank'>{description}</a>
+                    <p><a href={description} target='_blank'>{description}</a></p>
                   ) : description.slice(0,3) === 'www' ? (
-                    <a href={'//' + description} target='_blank'>{description}</a>
+                    <p><a href={'//' + description} target='_blank'>{description}</a></p>
                   ) : (
                     <p key={index}>{description}</p>
                   )
@@ -148,9 +148,9 @@ export default class StandardModal extends Component {
                                     <div>
                                       {
                                         content.text.slice(0,5) === 'https' ? (
-                                          <a href={content.text} target='_blank'>{content.text}</a>
+                                          <p><a href={content.text} target='_blank'>{content.text}</a></p>
                                         ) : content.text.slice(0,3) === 'www' ? (
-                                          <a href={'//' + content.text} target='_blank'>{content.text}</a>
+                                          <p><a href={'//' + content.text} target='_blank'>{content.text}</a></p>
                                         ) : (
                                           <p>{content.text}</p>
                                         )
@@ -192,9 +192,9 @@ export default class StandardModal extends Component {
                                       }
                                       {
                                         content.text.slice(0,5) === 'https' ? (
-                                          <a href={content.text} target='_blank'>{content.text}</a>
+                                          <p><a href={content.text} target='_blank'>{content.text}</a></p>
                                         ) : content.text.slice(0,3) === 'www' ? (
-                                          <a href={'//' + content.text} target='_blank'>{content.text}</a>
+                                          <p><a href={'//' + content.text} target='_blank'>{content.text}</a></p>
                                         ) : (
                                           <p>{content.text}</p>
                                         )
