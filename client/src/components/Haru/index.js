@@ -40,5 +40,5 @@ export default class Haru extends Component {
 
 let descriptions = [
   `https://harushop.herokuapp.com`,
-  `Made a static e-commerce page for a YouTube channel for easy checkout.`,
+  `Made a static e-commerce page for a YouTube channel with easy checkout.`,
 ];
