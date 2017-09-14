@@ -103,7 +103,7 @@ export default class StandardModal extends Component {
         <h1>{name}</h1>
         <div className='modal-description'>
           {
-            descriptions.map((description, index) => (
+            descriptions && descriptions.map((description, index) => (
               <div key={index}>
                 {
                   description.slice(0,5) === 'https' ? (

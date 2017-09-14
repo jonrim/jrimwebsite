@@ -10,7 +10,7 @@ export default (props) => {
   return (
     <div className='lightbox-photo'>
       {
-        pictures.map((picture, index) => (
+        pictures && pictures.map((picture, index) => (
           <button
             key={index}
             type="button"

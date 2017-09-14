@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Grid } from 'semantic-ui-react';
+import StandardModal from 'lib/components/Modal';
 
 import './index.scss';
 
@@ -24,9 +25,10 @@ export default class Haru extends Component {
               </a>
               <div className='description'>
                 <p>Built a static e-commerce page for a 28k+ subscribers YouTube channel.</p>
-                <Button>
-                  More Info
-                </Button>
+                <StandardModal
+                  name={'HARU THE SHIBA INU\'S SHOP'}
+                  descriptions={descriptions}
+                />
               </div>
             </div>
           </div>
@@ -35,3 +37,8 @@ export default class Haru extends Component {
     )
   }
 }
+
+let descriptions = [
+  `https://harushop.herokuapp.com`,
+  `Made a static e-commerce page for a YouTube channel for easy checkout.`,
+];
