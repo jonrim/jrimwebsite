@@ -22,6 +22,14 @@ export default class StandardModal extends Component {
     this.onMoveNextRequest = this.onMoveNextRequest.bind(this);
   }
 
+  changeSubsectionHeights(section) {
+    Array.from(section).forEach(subsection => {
+      if (!subsection.classList.contains('expand')) {
+        subsection.style['max-height'] = subsection.querySelector('h5').offsetHeight + 29 + 'px';
+      }
+    });
+  }
+
   componentDidUpdate() {
     // have a state variable called 'updated' so that this doesn't run for every updated property
     if (!this.state.updated) {
@@ -29,14 +37,9 @@ export default class StandardModal extends Component {
       let challengeContents = document.getElementsByClassName('challenge-contents');
       [introductionContents, challengeContents].forEach(section => {
         if (section && section.length > 0) {
-          // Resize the height of each 'Challenge' section when the window resizes
-          window.addEventListener('resize', e => {
-            Array.from(section).forEach(subsection => {
-              if (!subsection.classList.contains('expand')) {
-                subsection.style['max-height'] = subsection.querySelector('h5').offsetHeight + 29 + 'px';
-              }
-            });
-          });
+          window.addEventListener("orientationchange", e => this.changeSubsectionHeights(section));
+          // Resize the height of each subsection (under both Introduction and Challenges) when the window resizes
+          window.addEventListener('resize', e => this.changeSubsectionHeights(section));
           // Expand on click
           Array.from(section).forEach(subsection => {
             subsection.style['max-height'] = subsection.querySelector('h5').offsetHeight + 29 + 'px';
