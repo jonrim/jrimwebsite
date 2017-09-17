@@ -11,14 +11,13 @@ export default class Profile extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.changeScaling.bind(this));
     if (window.innerWidth >= 500) {
       setTimeout(() => {
         let leftCol = document.getElementById('left-education-container');
         let rightCol = document.getElementById('right-education-container');
         leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
         this.forceUpdate();
-      }, 100);
+      }, 400);
     }
     if (window.innerWidth >= 1200) {
       setTimeout(() => {
@@ -26,8 +25,9 @@ export default class Profile extends Component {
         let rightCol = document.getElementById('stack');
         leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
         this.forceUpdate();
-      }, 100);
+      }, 400);
     }
+    window.addEventListener('resize', this.changeScaling.bind(this));
   }
 
   changeScaling() {
@@ -39,9 +39,11 @@ export default class Profile extends Component {
       }
     }
     if (window.innerWidth >= 1200) {
-      let leftCol = document.getElementById('education');
-      let rightCol = document.getElementById('stack');
-      leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
+      setTimeout(() => {
+        let leftCol = document.getElementById('education');
+        let rightCol = document.getElementById('stack');
+        leftCol.style['top'] = 0.5 * (rightCol.offsetHeight - leftCol.offsetHeight) + 'px';
+      }, 100);
     }
     this.setState({
       screenWidth: window.innerWidth

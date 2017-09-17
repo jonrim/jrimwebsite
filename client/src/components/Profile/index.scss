@@ -77,12 +77,29 @@
     }
   }
 
+  #education {
+    .ten {
+      #left-education-container {
+        position: relative;
+        top: 14px;
+      }
+
+      img {
+        max-height: 50%;
+      }
+    }
+  }
+
   @media (min-width: 1200px) {
     #education {
       float: left;
-      top: 70px;
+      top: 60px;
       right: 40px;
       position: relative;
+
+      #left-education-container {
+        top: 8px;
+      }
     }
 
     #stack {
@@ -91,14 +108,12 @@
     }
   }
 
-  #education {
-    .ten {
-      #left-education-container {
-        position: relative;
-      }
+  @media (min-width: 1400px) {
+    #education {
+      top: 74px;
 
-      img {
-        max-height: 50%;
+      #left-education-container {
+        top: 9px;
       }
     }
   }
