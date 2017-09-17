@@ -31,7 +31,7 @@
     }
 
     @media (max-width: 427px) {
-      left: calc(50% - 138px);
+      left: calc(50% - 148px);
     }
 
     transition: left 0.5s ease-in-out;
@@ -59,6 +59,10 @@
     position: absolute;
     left: calc(50% + 10px);
     top: calc(50% - 26px);
+
+    @media (max-width: 427px) {
+      left: calc(50% - 5px);
+    }
 
     span {
       display: inline-block;
@@ -90,16 +94,9 @@
       margin: 140px 20px;
     }
 
-    .info {
-      h4, p {
-        font-size: 12px !important;
-      }
-    }
-
     .description {
       top: 86px;
       left: 10px;
-      font-size: 12px !important;
     }
   }
 
@@ -154,7 +151,10 @@
 
   @media (max-width: 427px) {
     .description {
-      max-width: 90%;
+      max-width: 70%;
+      margin-left: 15%;
+      position: absolute;
+      left: 0;
     }
   }
 
@@ -185,11 +185,11 @@
 }
 
 @keyframes topleft {
-  from { top: calc(50% - 26px); left: calc(50% + 10px); }
-  to { top: calc(50% - 170px); left: calc(50% - 70px); }
+  from { top: calc(50% - 26px); left: calc(50% - 5px); }
+  to { top: 40px; left: calc(50% - 71.6px); }
 }
 
 @keyframes topleftreverse {
-  from { top: calc(50% - 170px); left: calc(50% - 70px); }
-  to { top: calc(50% - 26px); left: calc(50% + 10px); }
+  from { top: 40px; left: calc(50% - 71.6px); }
+  to { top: calc(50% - 26px); left: calc(50% - 5px); }
 }

@@ -106,7 +106,6 @@ body, .app, #landing {
       @media (max-width: 385px) {
         top: -40px;
         position: relative;
-        font-size: 12px;
       }
 
       a {
@@ -129,7 +128,7 @@ body, .app, #landing {
 
     .clicked {
       .info {
-        top: 30px;
+        top: 30px !important;
       }
 
       .subtitle {
@@ -149,6 +148,18 @@ body, .app, #landing {
 
       .description {
         animation: fadeout 0.5s forwards ease-in-out;
+      }
+    }
+  }
+
+  #col-4 {
+    .info {
+      @media (max-width: 455px) {
+        top: 115px;
+      }
+
+      @media (min-width: 456px) and (max-width: 692px) {
+        top: 125px;
       }
     }
   }

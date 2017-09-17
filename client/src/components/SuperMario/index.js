@@ -16,8 +16,8 @@ export default class SuperMario extends Component {
                 <p className="subtitle">EXPLORATION OF PHYSICS ENGINES & GAME DESIGN</p>
               </div>
               <div className='description'>
-                <p>Completely remade the first level of Super Mario Bros. 3, and also made a unique custom level.</p>
-                <p>Focused on building a collision detection system, a physics engine, and a state machine for animations that imitate the real game.</p>
+                <p>Completely remade the first level and made a unique custom level.</p>
+                <p>Focused on building a collision detection system, a physics engine, and state machines for animations & sounds.</p>
                 <StandardModal
                   name='SUPER MARIO BROS. 3 REMAKE'
                   descriptions={descriptions}
@@ -39,7 +39,7 @@ let descriptions = [
   `https://github.com/jonrim/Super-Mario-Bros.-3`,
   `Remade the entire first level and also made my own custom level.`,
   `Built the entire game from scratch. Made my own physics engine that uses actual physics equations (with thresholds so that Mario
-  doesn't accelerate endlessly, and also to imitate the feel of the actual game), collision detection system, and state graph for animations and sounds.`,
+  doesn't accelerate endlessly, and also to imitate the feel of the actual game), collision detection system, and state machines for animations and sounds.`,
   `Built using Unity and C#.`
 ];
 

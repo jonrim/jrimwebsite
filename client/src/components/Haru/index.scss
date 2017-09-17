@@ -4,6 +4,12 @@
   background-size: cover;
 
   #haru {
+    .description {
+      @media (max-width: 385px) {
+        top: -5px;
+      }
+    }
+
     .button {
       background-color: #cc9d1e !important;
       

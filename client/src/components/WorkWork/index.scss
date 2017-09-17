@@ -8,10 +8,15 @@
       visibility: hidden;
       height: 12vw;
       position: absolute;
-      bottom: 15px;
-      left: 7px;
+      bottom: 18px;
+      left: 2px;
       max-height: 71px;
       min-height: 50px;
+
+      @media (min-width: 620px) {
+        left: 7px;
+        bottom: 15px;
+      }
     }
 
     .description {
@@ -28,10 +33,6 @@
 
       @media (max-width: 455px) {
         top: -45px;
-      }
-
-      @media (max-width: 403px) {
-        top: -66px;
       }
     }
 
