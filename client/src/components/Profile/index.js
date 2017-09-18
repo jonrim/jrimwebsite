@@ -83,12 +83,12 @@ export default class Profile extends Component {
                   </Grid.Column>
                   <Grid.Column>
                     <a href='https://www.fullstackacademy.com' target='_blank'>
-                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773170/fsa-mobile_cdqudw.png' />
+                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/c_crop,h_147,w_146/v1504773170/fsa-mobile_cdqudw.png' />
                     </a>
                   </Grid.Column>
                   <Grid.Column>
                     <a href='https://en.wikipedia.org/wiki/Stuyvesant_High_School' target='_blank'>
-                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773171/stuyvesant_paujhu.png' />
+                      <img src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/c_crop,w_1160/v1504773171/stuyvesant_paujhu.png' />
                     </a>
                   </Grid.Column>
                 </Grid>
