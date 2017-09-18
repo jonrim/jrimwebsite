@@ -4,6 +4,11 @@
   margin-bottom: 50px;
   font-family: 'Raleway', 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 
+  @media (max-width: 500px), (min-width: 1101px) and (max-width: 1200px) {
+    width: 80%;
+    margin: 0 10%;
+  }
+
   #profile-header {
     overflow: hidden;
   }
@@ -52,23 +57,6 @@
   }
 
   .grid {
-    @media (max-width: 600px) {
-      margin: 0 -25% !important;
-    }
-
-    @media (max-width: 727px) {
-      margin: 0 -10% !important;
-    }
-
-    @media (min-width: 932px) and (max-width: 1199px) {
-      margin: 0 10% !important;
-    }
-
-    @media (min-width: 1200px) {
-      margin: 0 !important;
-      display: inline-block;
-      width: 50%;
-    }
 
     .column {
       img {
@@ -77,12 +65,46 @@
     }
   }
 
-  #education {
-    .ten {
-      #left-education-container {
-        position: relative;
-        top: 14px;
+  #education-stack {
+    display: table;
+    margin: 30px 0;
+
+    @media (min-width: 860px) and (max-width: 1100px) {
+      margin: 30px;
+
+      #stack {
+        margin-left: 5% !important;
+        width: 90%;
       }
+    }
+   }
+
+  #education-wrapper, #stack-wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+
+  #education-wrapper {
+    @media (min-width: 1101px) {
+      width: 55%;
+      position: relative;
+      right: 40px;
+    }
+  }
+
+  #education {
+    display: table;
+    width: 100%;
+
+    .ten, .six {
+      display: table-cell;
+    }
+
+    .ten {
+      text-align: center;
+      vertical-align: middle;
 
       img {
         max-height: 50%;
@@ -90,39 +112,20 @@
     }
   }
 
-  @media (min-width: 1200px) {
-    #education {
-      float: left;
-      top: 60px;
-      right: 40px;
-      position: relative;
-
-      #left-education-container {
-        top: 8px;
-      }
-    }
-
-    #stack {
-      position: relative;
-      left: 40px;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    #education {
-      top: 74px;
-
-      #left-education-container {
-        top: 9px;
-      }
-    }
-  }
-
   #stack {
+    width: 100%;
+
     #express {
       img {
         margin-top: 6%;
       }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    #education-wrapper, #stack-wrapper {
+      display: block;
+      width: 100%;
     }
   }
 
