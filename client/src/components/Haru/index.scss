@@ -5,8 +5,13 @@
 
   #haru {
     .description {
-      @media (max-width: 385px) {
-        top: -5px;
+      @media (min-width: 1435px), (min-width: 726px) and (max-width: 991px) {
+        top: 18px;
+        position: relative;
+      }
+
+      @media (min-width: 381px) and (max-width: 546px) {
+        top: 15px;
       }
     }
 
