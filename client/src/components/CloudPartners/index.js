@@ -23,7 +23,7 @@ export default class CloudPartners extends Component {
               <div className="description">
                 <p>Currently building the entire client site of Cloud Partners' future platform.</p>
                 <p>Used for creating and evaluating assessments of interviewees
-                for companies like Goldman Sachs.</p>
+                for companies.</p>
                 <StandardModal
                   name='CLOUD PARTNERS'
                   descriptions={descriptions}
@@ -42,7 +42,7 @@ export default class CloudPartners extends Component {
 let descriptions = [
   'Currently building the Talent Optimization Platform that will be used by companies for creating and evaluating assessments of interviewees.',
   'Consists of a team of software engineers and one UI designer.',
-  'Plan on completing a working prototype by November and finishing by December.'
+  'Contract ended in December 2017 and the platform is currently on hold.'
 ];
 
 let headerPhotos = [
