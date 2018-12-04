@@ -111,7 +111,7 @@ export default class StandardModal extends Component {
                 {
                   description.slice(0,5) === 'https' ? (
                     <p><a href={description} target='_blank'>{description}</a></p>
-                  ) : description.slice(0,3) === 'www' ? (
+                  ) : description.slice(0,3) === 'www' || description.slice(-4) === '.com' ? (
                     <p><a href={'//' + description} target='_blank'>{description}</a></p>
                   ) : (
                     <p key={index}>{description}</p>

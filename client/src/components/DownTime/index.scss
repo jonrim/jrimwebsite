@@ -14,10 +14,8 @@
 
     .description {
       position: relative;
-
-      @media (max-width: 448px) {
-        top: -10px;
-      }
+      transform: translateY(-50%);
+      top: 50%;
     }
 
     .button {

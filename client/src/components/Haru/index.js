@@ -24,7 +24,7 @@ export default class Haru extends Component {
                 <Button className='website-button' icon='world' content='www' />
               </a>
               <div className='description'>
-                <p>Built a static e-commerce page for a 70k+ subscribers YouTube channel.</p>
+                <p>Built a static e-commerce page for a 300k+ subscribers YouTube channel.</p>
                 <StandardModal
                   name={'HARU THE SHIBA INU\'S SHOP'}
                   descriptions={descriptions}

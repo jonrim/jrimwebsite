@@ -1,0 +1,86 @@
+#kakao {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: calc(41% - 55px);
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 50vw;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .button {
+    background-color: #433228 !important;
+    color: white;
+
+    &:hover {
+      background-color: #392b23 !important;
+    }
+  }
+
+  .info {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    left: 70%;
+    max-width: 45%;
+    transition: left 0.5s ease-in-out;
+    top: 50%;
+
+    h2 {
+      color: #000 !important;
+    }
+
+    .subtitle {
+      font-weight: 700;
+    }
+  }
+
+  .description {
+    visibility: hidden;
+    transition: visibility 0.4s;
+    opacity: 0;
+    top: -200px;
+    position: relative;
+  }
+
+  .work-wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #FBDF00;
+  }
+}
+
+#kakao.clicked {
+  .description {
+    display: inline-block;
+    visibility: visible;
+    animation: fadein 0.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 55%;
+    width: 42%;
+  } 
+
+  .info {
+    transition: left 0.5s ease-in-out;
+    left: 30%;
+  }
+  
+  img {
+    animation: fadeout 0.1s forwards ease-in-out;
+  }
+}
+
+#kakao.unclicked {
+  img {
+    animation: fadein 0.5s forwards ease-in-out;
+  }
+}

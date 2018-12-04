@@ -5,6 +5,7 @@ import objectFitImages from 'object-fit-images';
 import Profile from '../Profile';
 import CloudPartners from '../CloudPartners';
 import FreshAire from '../FreshAire';
+import Kakao from '../Kakao';
 import DownTime from '../DownTime';
 import WorkWork from '../WorkWork';
 import SuperMario from '../SuperMario';
@@ -63,6 +64,11 @@ export default class Landing extends Component {
         <Grid columns={2} stackable doubling verticalAlign='middle'>
           <CloudPartners />
           <FreshAire />
+        </Grid>
+        <Grid columns={1} stackable doubling verticalAlign='middle'>
+          <Kakao />
+        </Grid>
+        <Grid columns={2} stackable doubling verticalAlign='middle'>
           <DownTime />
           <WorkWork />
           <SuperMario />

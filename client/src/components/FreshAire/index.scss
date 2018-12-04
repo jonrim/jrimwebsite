@@ -22,30 +22,11 @@
     position: absolute;
     left: calc(50% - 71.6px);
     transition: top 0.5s;
-    top: 65%;
+    transform: translateY(-50%);
+    top: 75%;
 
     h4 {
       color: #4CAF50;
-    }
-
-    @media (max-width: 727px) {
-      top: 60%;
-    }
-
-    @media (max-width: 400px) {
-      top: 55%;
-    }
-
-    @media (min-width: 992px) {
-      top: 60%;
-    }
-
-    @media (min-width: 1220px) {
-      top: 65%;
-    }
-
-    @media (min-width: 1660px) {
-      top: 70%;
     }
   }
 
@@ -71,7 +52,7 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     position: absolute;
-    top: 100px;
+    top: 160px;
     left: 0;
     margin-left: 15%;
     width: 70%;
@@ -82,7 +63,7 @@
   }
 
   .info {
-    top: 40px;
+    top: 100px;
   }
 }
 

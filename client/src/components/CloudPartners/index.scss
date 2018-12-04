@@ -51,14 +51,18 @@
     visibility: hidden;
     transition: visibility 0.4s;
     opacity: 0;
-    top: 89px;
-    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 50%;
+    width: 48%;
+    position: absolute;
   }
 
   .info {
     position: absolute;
     left: calc(50% + 10px);
-    top: calc(50% - 26px);
+    transform: translateY(-50%);
+    top: 50%;
 
     @media (max-width: 427px) {
       left: calc(50% - 5px);
@@ -70,13 +74,6 @@
   }
 
   @media (min-width: 481px) {
-    .description {
-      float: right;
-      top: 90px;
-      position: relative;
-      width: 50%;
-    }
-
     .info {
       transition: left 0.5s ease-in-out;
     }
@@ -95,7 +92,6 @@
     }
 
     .description {
-      top: 86px;
       left: 10px;
     }
   }
