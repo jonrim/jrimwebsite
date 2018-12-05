@@ -128,10 +128,18 @@
     display: inline-block;
     visibility: visible;
     max-width: 80%;
+    margin-left: 20%;
     animation: fadein 0.25s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+    
+    @media (max-width: 480px) {
+      max-width: 70%;
+      position: absolute;
+      left: 0;
+      margin-left: 0;
+    }
   } 
 
   img {
@@ -139,30 +147,17 @@
     animation: fadeout 0.5s forwards ease-in-out;
   }
 
-  @media (max-width: 480px) {
-    .info {
+  .info {
+    @media (max-width: 480px) {
+      left: calc(50% - 180px);
       animation: topleft 0.5s forwards ease-in-out !important;
     }
-  }
 
-  @media (max-width: 427px) {
-    .description {
-      max-width: 70%;
-      margin-left: 15%;
-      position: absolute;
-      left: 0;
+    @media (min-width: 481px) and (max-width: 980px) {
+      left: calc(50% - 230px);
     }
-  }
 
-  @media (min-width: 481px) and (max-width: 543px) {
-    img {
-      left: -50%;
-      animation: fadeout 0.5s forwards ease-in-out;
-    }
-  }
-
-  @media (min-width: 481px) {
-    .info {
+    @media (min-width: 981px) {
       left: calc(50% - 180px);
     }
   }
@@ -182,10 +177,10 @@
 
 @keyframes topleft {
   from { top: calc(50% - 26px); left: calc(50% - 5px); }
-  to { top: 40px; left: calc(50% - 71.6px); }
+  to { top: 60px; left: calc(50% - 71.6px); }
 }
 
 @keyframes topleftreverse {
-  from { top: 40px; left: calc(50% - 71.6px); }
+  from { top: 60px; left: calc(50% - 71.6px); }
   to { top: calc(50% - 26px); left: calc(50% - 5px); }
 }

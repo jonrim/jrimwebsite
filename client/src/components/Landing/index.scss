@@ -34,8 +34,20 @@ body, .app, #landing {
     }
   }
 
+  #col-kakao {
+    .col-wrapper {
+      background-color: #FBDF00;
+      
+      @media (min-width: 900px) {
+        margin: 0.5% !important;
+        height: 98% !important;
+        width: 99% !important;  
+      }
+    }
+  }
+
   .column.grid-col, #col-1, #col-2,
-  #col-3, #col-4, #col-5, #col-6 {
+  #col-3, #col-4, #col-5, #col-6, #col-kakao {
     height: 400px;
     overflow: hidden;
     padding: 0 !important;
@@ -69,9 +81,10 @@ body, .app, #landing {
     }
 
     .description {
-      @media (max-width: 480px) {
-        top: 120px;
-      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
     }
   }
 
@@ -95,18 +108,8 @@ body, .app, #landing {
     .description {
       opacity: 0;
       width: 70%;
-      margin-left: 15%;
+
       visibility: hidden;
-
-      @media (max-width: 546px) {
-        top: -20px;
-        position: relative;
-      }
-
-      @media (max-width: 385px) {
-        top: -40px;
-        position: relative;
-      }
 
       a {
         color: #24aaf0 !important;

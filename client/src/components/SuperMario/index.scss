@@ -4,26 +4,6 @@
   background-size: cover;
 
   #super-mario {
-    .description {
-      position: relative;
-   
-      @media (max-width: 991px), (min-width: 1354px) {
-        top: 23px;
-      }
-
-      @media (max-width: 685px) {
-        top: 10px;
-      }
-
-      @media (max-width: 448px) {
-        top: -10px;
-      }
-
-      @media (max-width: 354px) {
-        top: -33px;
-      }
-    }
-
     .button {
       background-color: #db2828 !important;
       

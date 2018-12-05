@@ -19,23 +19,6 @@
       }
     }
 
-    .description {
-      top: -15px;
-      position: relative;
-
-      @media (min-width: 1368px) {
-        top: 5px;
-      }
-
-      @media (min-width: 693px) and (max-width: 991px) {
-        top: 0;
-      }
-
-      @media (max-width: 455px) {
-        top: -45px;
-      }
-    }
-
     .button {
       background-color: #f65e13 !important;
       

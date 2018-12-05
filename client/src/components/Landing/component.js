@@ -27,7 +27,7 @@ export default class Landing extends Component {
         if (col.classList.contains('clicked')) {
           col.classList.remove('clicked');
           col.classList.add('unclicked');
-          if (index >= 2) {
+          if (index >= 3) {
             col.classList.remove('makeDim');
             col.classList.add('makeBright');
           }
@@ -35,7 +35,7 @@ export default class Landing extends Component {
         else {
           col.classList.add('clicked');
           col.classList.remove('unclicked');
-          if (index >= 2) {
+          if (index >= 3) {
             col.classList.add('makeDim');
             col.classList.remove('makeBright');
           }
