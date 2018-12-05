@@ -24,10 +24,15 @@
     margin-top: 0;
   }
 
-  #profile-img {
+  .tv-border {
     width: 30%;
-    border-radius: 20px;
+    overflow: hidden;
+    border-radius: 20% / 50%;
     float: left;
+
+    #profile-img {
+      border-radius: 50% / 20%;
+    }
   }
 
   img {

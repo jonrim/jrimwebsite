@@ -27,7 +27,7 @@ export default class Landing extends Component {
         if (col.classList.contains('clicked')) {
           col.classList.remove('clicked');
           col.classList.add('unclicked');
-          if (index >= 3) {
+          if (index >= 1 && index <= 4) {
             col.classList.remove('makeDim');
             col.classList.add('makeBright');
           }
@@ -35,7 +35,7 @@ export default class Landing extends Component {
         else {
           col.classList.add('clicked');
           col.classList.remove('unclicked');
-          if (index >= 3) {
+          if (index >= 1 && index <= 4) {
             col.classList.add('makeDim');
             col.classList.remove('makeBright');
           }
@@ -61,10 +61,6 @@ export default class Landing extends Component {
     return (
       <div className="container" id="landing">
         <Profile />
-        <Grid columns={2} stackable doubling verticalAlign='middle'>
-          <CloudPartners />
-          <FreshAire />
-        </Grid>
         <Grid columns={1} stackable doubling verticalAlign='middle'>
           <Kakao />
         </Grid>
@@ -73,6 +69,8 @@ export default class Landing extends Component {
           <WorkWork />
           <SuperMario />
           <Haru />
+          <CloudPartners />
+          <FreshAire />
         </Grid>
       </div>  
     );

@@ -32,10 +32,12 @@ export default class Profile extends Component {
     return (
       <div id='profile'>
         <div id='profile-header'>
-          <img
-            src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773171/profile_lqnift.png'
-            id='profile-img'
-          />
+          <div className='tv-border'>
+            <img
+              src='https://res.cloudinary.com/fresh-aire-mechanical-co/image/upload/v1504773171/profile_lqnift.png'
+              id='profile-img'
+            />
+          </div>
           <h1>Jonathan Rim</h1>
           <h4>jr@jonathanrim.com</h4>
           <div id='buttons'>

@@ -149,16 +149,15 @@
 
   .info {
     @media (max-width: 480px) {
-      left: calc(50% - 180px);
       animation: topleft 0.5s forwards ease-in-out !important;
     }
 
-    @media (min-width: 481px) and (max-width: 980px) {
-      left: calc(50% - 230px);
+    @media (max-width: 580px), (min-width: 981px) and (max-width: 1300px) {
+      left: calc(50% - 180px);
     }
 
-    @media (min-width: 981px) {
-      left: calc(50% - 180px);
+    @media (min-width: 581px) and (max-width: 980px), (min-width: 1301px) {
+      left: calc(50% - 230px);
     }
   }
 }

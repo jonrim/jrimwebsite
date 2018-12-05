@@ -58,7 +58,7 @@ let challenges = [
         text: `Having just gotten back into web development after a year, I had to upgrade a lot of packages. Some packages were now
                completely deprecated and not compatible with the latest version of React. React Router v4 was also unique because of
                its new dynamic routing (which lets the app render as it creates the routes rather than after). I also had to upgrade
-               to webpack v4`
+               to webpack v4.`
       }
     ]
   },
