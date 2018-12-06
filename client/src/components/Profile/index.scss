@@ -29,6 +29,8 @@
     overflow: hidden;
     border-radius: 20% / 50%;
     float: left;
+    margin-bottom: 25px;
+    margin-right: 10px;
 
     #profile-img {
       border-radius: 50% / 20%;
@@ -148,11 +150,6 @@
   }
 
   @media (max-width: 916px) {
-    #profile-img {
-      border-radius: 200px;
-      width: 40%;
-    }
-
     h1 {
       margin-top: 20px;
       margin-bottom: 10px;
@@ -173,29 +170,7 @@
     }
   }
 
-  @media (max-width: 727px) {
-    #profile-img {
-      width: 60%;
-      margin: 0 20%;
-      float: none;
-    }
-
-    h1 {
-      margin-top: 20px;
-    }
-
-    #buttons {
-      width: 60%;
-      margin: 0 20%;
-    }
-
-    .button {
-      display: inline-block;
-      margin: 0 1%;
-      width: 48%;
-      padding: 10px 5%;
-    }
-  }
+  
 
   @media (max-width: 614px) {
     #buttons {
