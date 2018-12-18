@@ -27,6 +27,7 @@
     "chance": "^1.0.6",
     "express": "^4.14.0",
     "express-session": "^1.15.2",
+    "greenlock-express": "^2.5.0",
     "morgan": "^1.7.0",
     "object-fit-images": "^3.2.3",
     "pg": "^6.1.4",
