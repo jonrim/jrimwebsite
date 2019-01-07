@@ -40,7 +40,7 @@ export default class CloudPartners extends Component {
 }
 
 let descriptions = [
-  'Currently building the Talent Optimization Platform that will be used by companies for creating and evaluating assessments of interviewees.',
+  'Built the Talent Optimization Platform that will be used by companies for creating and evaluating assessments of interviewees.',
   'Consists of a team of software engineers and one UI designer.',
   'Contract ended in December 2017 and the platform is currently on hold.'
 ];
