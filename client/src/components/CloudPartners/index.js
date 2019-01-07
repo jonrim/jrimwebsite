@@ -21,7 +21,7 @@ export default class CloudPartners extends Component {
                 <p className="subtitle"><span>July 2017</span> - <span>Dec 2017</span></p>
               </div>
               <div className="description">
-                <p>Currently building the entire client site of Cloud Partners' future platform.</p>
+                <p>Built the entire client site of Cloud Partners' future platform.</p>
                 <p>Used for creating and evaluating assessments of interviewees
                 for companies.</p>
                 <StandardModal

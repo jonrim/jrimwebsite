@@ -21,7 +21,7 @@ export default class Haru extends Component {
                 </Button>
               </a>
               <a href='//harushop.herokuapp.com' target='_blank'>
-                <Button className='website-button' icon='world' content='www' />
+                <Button disabled className='website-button' icon='world' content='www' />
               </a>
               <div className='description'>
                 <p>Built a static e-commerce page for a 300k+ subscribers YouTube channel.</p>
@@ -39,6 +39,6 @@ export default class Haru extends Component {
 }
 
 let descriptions = [
-  `https://harushop.herokuapp.com`,
+  `***currently overhauling this page***`,
   `Made a static e-commerce page for a YouTube channel with easy checkout.`,
 ];
